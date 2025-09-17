@@ -1,103 +1,71 @@
+import img1 from "@/public/img1.avif";
+// import img2 from "@/public/img2.avif";
+// import img3 from "@/public/img3.jpg";
 import Image from "next/image";
+import Button from "./_components/Button";
+
+export const metadata = {
+  title: {
+    template: "%s | Nepal Silage Seller",
+    default: "Nepal Silage Seller",
+  },
+  description:
+    "Welcome to Nepal Silage Seller. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.",
+  keywords: [
+    "Corn Silage Nepal",
+    "Quality CornMeal Silage",
+    "Livestock Feed",
+    "Premium Silage Supplier",
+    "Best Corn Silage",
+  ],
+  openGraph: {
+    title: "Premium Corn Silage & CornMeal | Nepal Silage Seller",
+    description:
+      "Discover high-quality Corn Silage and CornMeal Silage from Nepal Silage Seller. Ensuring superior nutrition for livestock.",
+    // url: "https://yourdomain.com",
+    siteName: "Nepal Silage Seller",
+    images: [
+      {
+        url: "/img1.avif",
+        width: 1200,
+        height: 630,
+        alt: "Premium Corn Silage Cover Image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="relative -mt-20 h-screen w-full">
+      <Image
+        src={img1}
+        priority
+        fill
+        alt="cover image"
+        placeholder="blur"
+        className="-z-10 object-cover object-center shadow-xl shadow-green-50"
+      />
+      {/* overlay */}
+      <div className="bg-primary/30 absolute inset-0 -z-5"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      {/* Overlay content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 px-4 text-center">
+        <h1 className="text-4xl font-bold text-lime-50 drop-shadow-lg md:text-6xl">
+          Welcome to Our Farm
+        </h1>
+        <p className="mt-4 max-w-2xl text-lg text-lime-50 drop-shadow-md md:text-2xl">
+          Discover premium-quality corn silage and feed solutions for your
+          livestock. Fresh, nutritious, and grown with care to maximize
+          productivity and sustainability.
+        </p>
+
+        <Button href="/contact" variant="primary">
+          Contact Us Now
+        </Button>
+      </div>
     </div>
   );
 }
