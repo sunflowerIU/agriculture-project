@@ -44,6 +44,7 @@ export default function QualityCornSilagePage() {
         {/* Product Image */}
         <div className="relative h-[350px] w-full sm:h-[450px]">
           <Image
+            placeholder="blur"
             src={cornSilage}
             alt="Quality Corn Silage"
             fill

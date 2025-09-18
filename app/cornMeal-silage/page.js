@@ -45,6 +45,7 @@ export default function CornMealSilagePage() {
         {/* Product Image */}
         <div className="relative h-[350px] w-full sm:h-[450px]">
           <Image
+            placeholder="blur"
             src={fodder}
             alt="CornMeal Silage"
             fill

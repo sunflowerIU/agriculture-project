@@ -27,6 +27,7 @@ function GalleryGrid() {
               onClick={() => setSelectedImg(src)}
             >
               <Image
+                placeholder="blur"
                 src={src}
                 alt={`Product ${index + 1}`}
                 width={500}
