@@ -21,9 +21,8 @@ export const metadata = {
     "Livestock Feed Inquiry",
   ],
   openGraph: {
-    title: "Contact Us | Nepal Silage Seller",
-    description:
-      "Reach out to [Your Brand Name] for premium Corn Silage and CornMeal Silage products.",
+    title: `Contact Us | ${process.env.COMPANY_NAME}`,
+    description: `Reach out to ${process.env.COMPANY_NAME} for premium Corn Silage and CornMeal Silage products.`,
     // url: "https://yourdomain.com/contact",
     // images: [
     //   {
