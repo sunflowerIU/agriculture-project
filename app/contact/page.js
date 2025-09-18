@@ -13,7 +13,7 @@ import Button from "../_components/Button";
 export const metadata = {
   title: "Contact Us ",
   description:
-    "Get in touch with [Your Brand Name] for inquiries, product details, and orders of Corn Silage & CornMeal Silage in Nepal.",
+    "Get in touch with Nepal Silage Seller for inquiries, product details, and orders of Corn Silage & CornMeal Silage in Nepal.",
   keywords: [
     "Contact Corn Silage Supplier",
     "Corn Silage Nepal Contact",
@@ -39,7 +39,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="bg-secondary h-screen px-4 py-6 sm:px-6">
+    <section className="bg-secondary px-4 py-6 sm:px-6">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-primary mb-10 text-center text-3xl font-bold">
           Contact Us

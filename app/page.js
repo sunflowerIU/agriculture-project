@@ -1,16 +1,11 @@
-import img1 from "@/public/img1.avif";
-// import img2 from "@/public/img2.avif";
+import img1 from "@/public/img1.jpg";
+// import img2 from "@/public/img2.jpg";
 // import img3 from "@/public/img3.jpg";
 import Image from "next/image";
 import Button from "./_components/Button";
 
 export const metadata = {
-  title: {
-    template: "%s | Nepal Silage Seller",
-    default: "Nepal Silage Seller",
-  },
-  description:
-    "Welcome to Nepal Silage Seller. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.",
+  description: `Welcome to ${process.env.COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
   keywords: [
     "Corn Silage Nepal",
     "Quality CornMeal Silage",
@@ -19,14 +14,14 @@ export const metadata = {
     "Best Corn Silage",
   ],
   openGraph: {
-    title: "Premium Corn Silage & CornMeal | Nepal Silage Seller",
+    title: `Premium Corn Silage & CornMeal | ${process.env.COMPANY_NAME}`,
     description:
       "Discover high-quality Corn Silage and CornMeal Silage from Nepal Silage Seller. Ensuring superior nutrition for livestock.",
     // url: "https://yourdomain.com",
     siteName: "Nepal Silage Seller",
     images: [
       {
-        url: "/img1.avif",
+        url: "/img1.jpg",
         width: 1200,
         height: 630,
         alt: "Premium Corn Silage Cover Image",
@@ -38,6 +33,7 @@ export const metadata = {
 };
 
 export default function Home() {
+  console.log(process.env.COMPANY_NAME);
   return (
     <div className="relative -mt-20 h-screen w-full">
       <Image

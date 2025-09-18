@@ -10,7 +10,7 @@ import Button from "../_components/Button";
 // export const metadata = {
 //   title: "About Us ",
 //   description:
-//     "Learn more about Nepal Silage Seller – a trusted provider of Corn Silage and CornMeal Silage in Nepal. Our mission: quality feed, healthier livestock, happier farmers.",
+//     `Learn more about ${process.env.COMPANY_NAME} – a trusted provider of Corn Silage and CornMeal Silage in Nepal. Our mission: quality feed, healthier livestock, happier farmers.`,
 //   keywords: [
 //     "About Corn Silage Supplier",
 //     "Corn Silage Nepal Company",
@@ -18,7 +18,7 @@ import Button from "../_components/Button";
 //     "About Us Nepal Silage Seller",
 //   ],
 //   openGraph: {
-//     title: "About Us | Nepal Silage Seller",
+//     title: `About Us | ${process.env.COMPANY_NAME}`,
 //     description:
 //       "Discover our journey and commitment to delivering top-quality livestock nutrition in Nepal.",
 //     // url: "https://yourdomain.com/about",
