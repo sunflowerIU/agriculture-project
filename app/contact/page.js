@@ -133,9 +133,7 @@ export default function ContactPage() {
               <input
                 type="text"
                 name="phone"
-                minLength={10}
-                maxLength={10}
-                pattern="\d{10}"
+                pattern="^\d{10}$"
                 placeholder="Your Phone Number"
                 required
                 className="placeholder-primary w-full rounded-md border border-green-700 px-3 py-2 focus:outline-none"

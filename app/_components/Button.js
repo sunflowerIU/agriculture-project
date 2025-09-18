@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 export default function Button({
+  type,
   children,
   href = "#",
   onClick,
@@ -28,6 +29,15 @@ export default function Button({
       <Link href={href} className={combinedClasses}>
         {children}
       </Link>
+    );
+  }
+
+  // submit button
+  if (type === "submit") {
+    return (
+      <button type="submit" className={combinedClasses}>
+        {children}
+      </button>
     );
   }
 
