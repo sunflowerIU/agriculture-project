@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function QualityCornSilagePage() {
   return (
-    <section className="mx-auto max-w-7xl py-10 sm:px-8 lg:px-8">
+    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-8 lg:px-8">
       {/* Hero Section */}
       <div className="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
