@@ -12,15 +12,15 @@ export const metadata = {
     title: `Product Gallery | ${process.env.COMPANY_NAME}`,
     description:
       "Take a closer look at our high-quality Corn Silage and CornMeal Silage products in our gallery.",
-    // url: "https://yourdomain.com/gallery",
-    // images: [
-    //   {
-    //     url: "/images/gallery-cover.jpg",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Product Gallery",
-    //   },
-    // ],
+    url: "/gallery",
+    images: [
+      {
+        url: "/fodder.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Product Gallery",
+      },
+    ],
     type: "website",
   },
 };

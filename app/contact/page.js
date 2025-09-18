@@ -15,7 +15,7 @@ export const metadata = {
   description:
     "Get in touch with Nepal Silage Seller for inquiries, product details, and orders of Corn Silage & CornMeal Silage in Nepal.",
   keywords: [
-    "Contact Corn Silage Supplier",
+    `Contact ${process.env.COMPANY_NAME}`,
     "Corn Silage Nepal Contact",
     "CornMeal Silage Orders",
     "Livestock Feed Inquiry",
@@ -23,15 +23,14 @@ export const metadata = {
   openGraph: {
     title: `Contact Us | ${process.env.COMPANY_NAME}`,
     description: `Reach out to ${process.env.COMPANY_NAME} for premium Corn Silage and CornMeal Silage products.`,
-    // url: "https://yourdomain.com/contact",
-    // images: [
-    //   {
-    //     url: "/images/contact.jpg",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Contact Us - Corn Silage Supplier",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/profile1.jpg",
+        width: 1200,
+        height: 630,
+        alt: `Contact Us - ${process.env.COMPANY_NAME}`,
+      },
+    ],
     type: "website",
   },
 };

@@ -51,7 +51,7 @@ function Navigation() {
               href={items.href}
               className={navItemsClass}
             >
-              <li>{items.name}</li>
+              {items.name}
             </Link>
           ))}
         </ul>
@@ -59,7 +59,7 @@ function Navigation() {
         {/* button for nav-mobile */}
         <button
           aria-controls="mobile-nav"
-          role="menu"
+          aria-expanded={isOpen}
           aria-label="Toggle navigation menu"
           onClick={() => setIsOpen((state) => !state)}
           className="cursor-pointer md:hidden"
@@ -70,18 +70,20 @@ function Navigation() {
 
       {/* dropdown nav */}
       <div
+        role="menu"
         id="mobile-nav"
         className={`bg-primary overflow-hidden border-t border-b transition-all duration-500 ease-in-out md:max-h-0 md:opacity-0 ${isOpen ? "max-h-screen p-4 opacity-100" : "max-h-0 opacity-0"} `}
       >
         <ul className="flex flex-col space-y-3">
           {navItems.map((items) => (
             <Link
+              role="menuitem"
               onClick={() => setIsOpen(false)}
               key={items.href}
               href={items.href}
               className={navItemsClass}
             >
-              <li>{items.name}</li>
+              {items.name}
             </Link>
           ))}
         </ul>

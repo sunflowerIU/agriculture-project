@@ -5,6 +5,7 @@ import Image from "next/image";
 import Button from "./_components/Button";
 
 export const metadata = {
+  title: process.env.COMPANY_NAME,
   description: `Welcome to ${process.env.COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
   keywords: [
     "Corn Silage Nepal",
@@ -17,14 +18,13 @@ export const metadata = {
     title: `Premium Corn Silage & CornMeal | ${process.env.COMPANY_NAME}`,
     description:
       "Discover high-quality Corn Silage and CornMeal Silage from Nepal Silage Seller. Ensuring superior nutrition for livestock.",
-    // url: "https://yourdomain.com",
-    siteName: "Nepal Silage Seller",
+    siteName: process.env.COMPANY_NAME,
     images: [
       {
         url: "/img1.jpg",
         width: 1200,
         height: 630,
-        alt: "Premium Corn Silage Cover Image",
+        alt: `${process.env.COMPANY_NAME} cover page`,
       },
     ],
     locale: "en_US",

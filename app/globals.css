@@ -7,3 +7,8 @@
   --color-text: oklch(20% 0.005 264.531);
   --color-royal: #0057b7;
 }
+
+html,
+body {
+  height: 100%;
+}

@@ -1,18 +1,17 @@
-// app/cornMeal-silage/page.tsx
 import fodder from "@/public/fodder.jpg";
 import Image from "next/image";
 import Button from "../_components/Button";
 
 export const metadata = {
-  title: "CornMeal Silage | Your Brand Name",
+  title: "CornMeal Silage",
   description:
     "High-quality CornMeal Silage, processed for better digestibility, energy, and nutrition to improve livestock productivity.",
   openGraph: {
-    title: "CornMeal Silage | Your Brand Name",
+    title: `CornMeal Silage | ${process.env.COMPANY_NAME}`,
     description:
       "Discover our nutrient-packed CornMeal Silage — a perfect feed solution for dairy cattle and livestock.",
-    url: "https://yourdomain.com/cornMeal-silage",
-    images: ["/images/cornmeal-silage-og.jpg"],
+    url: "/cornMeal-silage",
+    images: ["/fodder.jpg"],
   },
 };
 
