@@ -1,14 +1,13 @@
-"use client";
+import { useFormStatus } from "react-dom";
 
-import Link from "next/link";
-
-export default function Button({
-  children,
-  href = "",
-  onClick,
-  variant = "primary", // primary, secondary, outline
+function SubmitButton({
+  variant = "primary",
   className = "",
+  updatingLabel = "",
+  children,
 }) {
+  const { pending } = useFormStatus();
+
   // Define variant styles
   const baseClasses =
     "inline-block font-semibold px-6 py-3 rounded-lg hover:scale-110  shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-400 mt-6 cursor-pointer";
@@ -22,18 +21,11 @@ export default function Button({
 
   const combinedClasses = `${baseClasses} ${variants[variant]} ${className}`;
 
-  // Render as <a> if href is provided, otherwise <button>
-  if (href) {
-    return (
-      <Link href={href} className={combinedClasses}>
-        {children}
-      </Link>
-    );
-  }
-
   return (
-    <button onClick={onClick} className={combinedClasses}>
-      {children}
+    <button disabled={pending} type="submit" className={combinedClasses}>
+      {pending ? updatingLabel : children}
     </button>
   );
 }
+
+export default SubmitButton;

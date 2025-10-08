@@ -1,18 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import Logo from "./Logo";
 
 const navItems = [
   {
-    name: "Corn Silage",
-    href: "/corn-silage",
+    name: "Products And Services",
+    href: "/products",
   },
-  {
-    name: "CornMeal Silage",
-    href: "/cornMeal-silage",
-  },
+
   {
     name: "Gallery",
     href: "/gallery",
@@ -26,6 +23,11 @@ const navItems = [
     name: "Contact Us",
     href: "/contact",
   },
+
+  {
+    name: "Career",
+    href: "/career",
+  },
 ];
 
 const navItemsClass = `
@@ -37,11 +39,29 @@ const navItemsClass = `
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
+  console.log(navRef);
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (navRef && !navRef.current.contains(e.target)) {
+        // console.log(navRef);
+        setIsOpen(false);
+      }
+    }
+
+    window.addEventListener("click", handleClickOutside);
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, []);
+
   return (
-    <div className="bg-gray-20 fixed top-0 left-0 z-20 w-full text-lg text-lime-50 shadow-2xs">
+    <div
+      ref={navRef}
+      className="bg-gray-20 z-20 w-full text-lg text-lime-50 shadow-2xs"
+    >
       <nav className="bg-primary flex flex-row items-center justify-between p-4">
         {/* logo */}
-        <Logo />
+        <Logo setIsOpen={setIsOpen} />
         {/* desktop nav */}
         <ul className="hidden flex-row justify-between gap-2 font-semibold md:flex">
           {navItems.map((items) => (
@@ -72,7 +92,7 @@ function Navigation() {
       <div
         role="menu"
         id="mobile-nav"
-        className={`bg-primary overflow-hidden border-t border-b transition-all duration-500 ease-in-out md:max-h-0 md:opacity-0 ${isOpen ? "max-h-screen p-4 opacity-100" : "max-h-0 opacity-0"} `}
+        className={`bg-primary absolute w-full overflow-hidden transition-all duration-500 ease-in-out md:max-h-0 md:opacity-0 ${isOpen ? "z-100 max-h-screen border-t border-b p-4 opacity-100" : "max-h-0 opacity-0"} `}
       >
         <ul className="flex flex-col space-y-3">
           {navItems.map((items) => (

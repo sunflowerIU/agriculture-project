@@ -3,6 +3,9 @@ import img1 from "@/public/img1.jpg";
 // import img3 from "@/public/img3.jpg";
 import Image from "next/image";
 import Button from "./_components/Button";
+import ContactFooter from "./_components/ContactFooter";
+import HomeContent from "./_components/HomeContents";
+import PhoneNumber from "./_components/PhoneNumber";
 
 export const metadata = {
   title: process.env.COMPANY_NAME,
@@ -33,35 +36,44 @@ export const metadata = {
 };
 
 export default function Home() {
-  console.log(process.env.COMPANY_NAME);
+  // console.log(process.env.COMPANY_NAME);
   return (
-    <div className="relative -mt-20 h-screen w-full">
-      <Image
-        src={img1}
-        priority
-        fill
-        alt="cover image"
-        placeholder="blur"
-        className="-z-10 object-cover object-center shadow-xl shadow-green-50"
-      />
-      {/* overlay */}
-      <div className="bg-primary/30 absolute inset-0 -z-5"></div>
+    <div className="w-full text-lime-50">
+      <header className="shadow-primary relative h-[500px] shadow-sm">
+        <Image
+          src={img1}
+          priority
+          fill
+          alt="cover image"
+          placeholder="blur"
+          className="-z-10 object-cover object-center shadow-xl shadow-green-50"
+        />
+        {/* overlay */}
+        <div className="bg-primary/30 absolute inset-0 -z-5"></div>
 
-      {/* Overlay content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 px-4 text-center">
-        <h1 className="text-4xl font-bold text-lime-50 drop-shadow-lg md:text-6xl">
-          Welcome to Our Farm
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-lime-50 drop-shadow-md md:text-2xl">
-          Discover premium-quality corn silage and feed solutions for your
-          livestock. Fresh, nutritious, and grown with care to maximize
-          productivity and sustainability.
-        </p>
+        {/* Overlay content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 px-4 text-center">
+          <h1 className="text-4xl font-bold drop-shadow-lg md:text-6xl">
+            Welcome to Our Farm
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg drop-shadow-md md:text-2xl">
+            Discover premium-quality corn silage and feed solutions for your
+            livestock. Fresh, nutritious, and grown with care to maximize
+            productivity and sustainability.
+          </p>
 
-        <Button href="/contact" variant="primary">
-          Contact Us Now
-        </Button>
-      </div>
+          <Button href="/contact" variant="primary">
+            Contact Us Now
+          </Button>
+          <PhoneNumber />
+        </div>
+      </header>
+
+      {/* contents */}
+      <HomeContent />
+
+      {/* footer */}
+      <ContactFooter />
     </div>
   );
 }

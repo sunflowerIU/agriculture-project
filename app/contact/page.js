@@ -1,14 +1,6 @@
-import {
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaMapLocationDot,
-  FaPhone,
-  FaWhatsapp,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
-import Button from "../_components/Button";
+import { FaEnvelope, FaMapLocationDot, FaPhone } from "react-icons/fa6";
+import Form from "../_components/Form";
+import SocialMedia from "../_components/SocialMedia";
 
 export const metadata = {
   title: "Contact Us ",
@@ -37,7 +29,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="bg-secondary px-4 py-6 sm:px-6">
+    <section className="bg-secondary px-4 py-10 sm:px-6">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-primary mb-10 text-center text-3xl font-bold">
           Contact Us
@@ -62,46 +54,8 @@ export default function ContactPage() {
               </li>
             </ul>
             {/* Social Media */}
-            <div className="mt-2 min-w-0">
-              <h3 className="mb-2 text-xl font-semibold">Follow Us</h3>
-              <div className="flex flex-wrap gap-4 text-2xl">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  className="transition hover:scale-y-75"
-                >
-                  <FaFacebookF />
-                </a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  className="transition hover:scale-y-75"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="#"
-                  aria-label="Twitter/X"
-                  className="transition hover:scale-y-75"
-                >
-                  <FaXTwitter />
-                </a>
-                <a
-                  href="#"
-                  aria-label="YouTube"
-                  className="transition hover:scale-y-75"
-                >
-                  <FaYoutube />
-                </a>
-                <a
-                  href="#"
-                  aria-label="WhatsApp"
-                  className="transition hover:scale-y-75"
-                >
-                  <FaWhatsapp />
-                </a>
-              </div>
-            </div>
+
+            <SocialMedia />
 
             <p className="mt-6">
               We’ll get back to you within 24 hours on working days.
@@ -109,47 +63,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <form className="rounded-2xl border-1 border-lime-500 p-6 shadow-lg">
-            <h2 className="text-primary mb-4 text-xl font-semibold">
-              Send Us a Message
-            </h2>
-
-            <div className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-                className="placeholder-primary w-full rounded-md border border-green-700 px-3 py-2 focus:outline-none"
-              />
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-                className="placeholder-primary w-full rounded-md border border-green-700 px-3 py-2 focus:outline-none"
-              />
-              <input
-                type="text"
-                name="phone"
-                pattern="^\d{10}$"
-                placeholder="Your Phone Number"
-                required
-                className="placeholder-primary w-full rounded-md border border-green-700 px-3 py-2 focus:outline-none"
-              />
-
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows={5}
-                required
-                className="placeholder-primary w-full rounded-md border border-green-700 px-3 py-2 focus:outline-none"
-              />
-
-              <Button>Submit Now</Button>
-            </div>
-          </form>
+          <Form />
         </div>
       </div>
     </section>

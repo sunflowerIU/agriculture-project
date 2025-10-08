@@ -31,7 +31,7 @@ import Spinner from "../_components/Spinner";
 
 export default function Gallery() {
   return (
-    <div className="bg-secondary min-h-screen py-16">
+    <div className="bg-secondary min-h-screen py-10">
       {/* Page Header */}
       <section className="mb-12 text-center">
         <h1 className="text-4xl font-bold text-green-900">Our Gallery</h1>

@@ -1,12 +1,13 @@
 import Navigation from "@/app/_components/Navigation";
 import "./globals.css";
-import { Raleway } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const raleway = Raleway({
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  display: "swap",
+  display: "swap", // Optional: Controls how the font is displayed while loading
+  variable: "--font-poppins", // Optional: Define a CSS variable for the font
 });
-
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL),
   title: {
@@ -41,10 +42,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${raleway.className}`}>
+    <html lang="en" className={`${poppins.className}`}>
       <body className="bg-secondary">
         <Navigation />
-        <main className="pt-20">{children}</main>
+        <main className="">{children}</main>
       </body>
     </html>
   );

@@ -1,9 +1,11 @@
 import Link from "next/link";
 
-function Logo() {
+function Logo({ setIsOpen }) {
   return (
     <div>
-      <Link href="/">logo</Link>
+      <Link onClick={() => setIsOpen(false)} href="/">
+        logo
+      </Link>
     </div>
   );
 }

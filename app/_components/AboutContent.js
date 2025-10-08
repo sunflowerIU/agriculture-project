@@ -1,17 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { FaQuoteLeft } from "react-icons/fa";
 import profile1 from "@/public/profile1.jpg";
 import profile2 from "@/public/profile2.jpg";
-import Button from "../_components/Button";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaQuoteLeft } from "react-icons/fa";
+import ContactFooter from "./ContactFooter";
 
 function AboutContent() {
   return (
-    <div className="text-text -mt-10">
+    <div className="text-text">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-green-900 via-green-800 to-green-700 py-20 text-center text-white">
+      <section className="relative bg-gradient-to-r from-green-900 via-green-800 to-green-700 py-16 text-center text-white">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,16 +117,7 @@ function AboutContent() {
       </section>
 
       {/* Call to Action */}
-      <section className="space-y-2.5 bg-green-800 py-16 text-center text-lime-50">
-        <h2 className="text-3xl font-bold">Let’s Work Together</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-lime-100">
-          Ready to grow with us? Get in touch today and discover how we can help
-          you succeed.
-        </p>
-        <Button variant="secondary" href="/contact">
-          Contact Us
-        </Button>
-      </section>
+      <ContactFooter />
     </div>
   );
 }

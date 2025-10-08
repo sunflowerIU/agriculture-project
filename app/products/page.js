@@ -15,7 +15,7 @@ export const metadata = {
   },
 };
 
-export default function QualityCornSilagePage() {
+export default function Products() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-8 lg:px-8">
       {/* Hero Section */}
