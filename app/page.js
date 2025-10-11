@@ -1,4 +1,4 @@
-import img1 from "@/public/img1.jpg";
+import cover from "@/public/cover.png";
 // import img2 from "@/public/img2.jpg";
 // import img3 from "@/public/img3.jpg";
 import Image from "next/image";
@@ -24,7 +24,7 @@ export const metadata = {
     siteName: process.env.COMPANY_NAME,
     images: [
       {
-        url: "/img1.jpg",
+        url: "/cover.png",
         width: 1200,
         height: 630,
         alt: `${process.env.COMPANY_NAME} cover page`,
@@ -41,7 +41,7 @@ export default function Home() {
     <div className="w-full text-lime-50">
       <header className="shadow-primary relative h-[500px] shadow-sm">
         <Image
-          src={img1}
+          src={cover}
           priority
           fill
           alt="cover image"
@@ -49,7 +49,7 @@ export default function Home() {
           className="-z-10 object-cover object-center shadow-xl shadow-green-50"
         />
         {/* overlay */}
-        <div className="bg-primary/30 absolute inset-0 -z-5"></div>
+        <div className="bg-primary/10 absolute inset-0 -z-5"></div>
 
         {/* Overlay content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 px-4 text-center">
