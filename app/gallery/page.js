@@ -9,7 +9,7 @@ export const metadata = {
     "Silage Images Nepal",
   ],
   openGraph: {
-    title: `Product Gallery | ${process.env.COMPANY_NAME}`,
+    title: `Product Gallery | ${process.env.NEXT_PUBLIC_COMPANY_NAME}`,
     description:
       "Take a closer look at our high-quality Corn Silage and CornMeal Silage products in our gallery.",
     url: "/gallery",

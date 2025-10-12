@@ -8,8 +8,8 @@ import HomeContent from "./_components/HomeContents";
 import PhoneNumber from "./_components/PhoneNumber";
 
 export const metadata = {
-  title: process.env.COMPANY_NAME,
-  description: `Welcome to ${process.env.COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
+  title: process.env.NEXT_PUBLIC_COMPANY_NAME,
+  description: `Welcome to ${process.env.NEXT_PUBLIC_COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
   keywords: [
     "Corn Silage Nepal",
     "Quality CornMeal Silage",
@@ -18,16 +18,16 @@ export const metadata = {
     "Best Corn Silage",
   ],
   openGraph: {
-    title: `Premium Corn Silage & CornMeal | ${process.env.COMPANY_NAME}`,
+    title: `Premium Corn Silage & CornMeal | ${process.env.NEXT_PUBLIC_COMPANY_NAME}`,
     description:
       "Discover high-quality Corn Silage and CornMeal Silage from Nepal Silage Seller. Ensuring superior nutrition for livestock.",
-    siteName: process.env.COMPANY_NAME,
+    siteName: process.env.NEXT_PUBLIC_COMPANY_NAME,
     images: [
       {
         url: "/cover.png",
         width: 1200,
         height: 630,
-        alt: `${process.env.COMPANY_NAME} cover page`,
+        alt: `${process.env.NEXT_PUBLIC_COMPANY_NAME} cover page`,
       },
     ],
     locale: "en_US",
@@ -36,7 +36,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  // console.log(process.env.COMPANY_NAME);
+  // console.log(process.env.NEXT_PUBLIC_COMPANY_NAME);
   return (
     <div className="w-full text-lime-50">
       <header className="shadow-primary relative h-[500px] shadow-sm">

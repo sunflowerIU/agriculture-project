@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Premium quality corn silage that ensures high nutrition, long shelf life, and increased milk production for dairy farmers.",
   openGraph: {
-    title: `Corn Silage | ${process.env.COMPANY_NAME}`,
+    title: `Corn Silage | ${process.env.NEXT_PUBLIC_COMPANY_NAME}`,
     description:
       "Discover our premium corn silage, carefully processed to retain freshness and nutrients for your livestock.",
     url: "corn-silage",

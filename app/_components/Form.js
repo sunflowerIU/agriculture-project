@@ -7,13 +7,16 @@ function Form() {
   return (
     <form
       action={async (formData) => {
-        const data = await sendEmail(formData);
+        const response = await sendEmail(formData);
 
-        console.log(data);
-        if (data.id) {
+        // console.log(response);
+        if (response.id) {
           alert("Your message has been sent successfully.");
         } else {
-          alert(data.message);
+          alert(
+            response.error ||
+              "Failed to send your message. Please try again later.",
+          );
         }
       }}
       className="rounded-2xl border-1 border-lime-500 p-6 shadow-lg"

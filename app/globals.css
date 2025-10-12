@@ -6,6 +6,8 @@
   --color-secondary: oklch(92.8% 0.006 264.531);
   --color-text: oklch(20% 0.005 264.531);
   --color-royal: #0057b7;
+
+  --breakpoint-md: 840px;
 }
 
 html,

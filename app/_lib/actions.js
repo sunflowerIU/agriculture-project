@@ -10,14 +10,19 @@ export async function sendEmail(formData) {
   const phone = formData.get("phone");
   const message = formData.get("message");
   const bot = formData.get("bot");
-  //   console.log(formData);
 
   if (bot) {
     throw Error("You cannot submit the form.");
   }
 
+  // Basic validation
+  if (!name || !email || !message) {
+    return { error: "Name, email, and message are required." };
+  }
+
   try {
     const { data, error } = await resend.emails.send({
+      // TODO: Replace with your real sender address/domain
       from: "Acme <onboarding@resend.dev>",
       to: ["amittamang423@gmail.com"],
       subject: "Your work website",
@@ -32,11 +37,11 @@ export async function sendEmail(formData) {
     });
 
     if (error) {
-      return error;
+      return { error: error.message || "Failed to send email." };
     }
 
     return data;
   } catch (error) {
-    return error;
+    return { error: "An unexpected error occurred. Please try again later." };
   }
 }

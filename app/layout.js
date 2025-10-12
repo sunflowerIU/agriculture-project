@@ -11,10 +11,10 @@ const poppins = Poppins({
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL),
   title: {
-    template: `%s | ${process.env.COMPANY_NAME}`,
-    default: process.env.COMPANY_NAME,
+    template: `%s | ${process.env.NEXT_PUBLIC_COMPANY_NAME}`,
+    default: process.env.NEXT_PUBLIC_COMPANY_NAME,
   },
-  description: `Welcome to ${process.env.COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
+  description: `Welcome to ${process.env.NEXT_PUBLIC_COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
   keywords: [
     "Corn Silage Nepal",
     "Quality CornMeal Silage",
@@ -23,16 +23,16 @@ export const metadata = {
     "Best Corn Silage",
   ],
   openGraph: {
-    title: `Premium Corn Silage & CornMeal | ${process.env.COMPANY_NAME}`,
+    title: `Premium Corn Silage & CornMeal | ${process.env.NEXT_PUBLIC_COMPANY_NAME}`,
     description:
       "Discover high-quality Corn Silage and CornMeal Silage from Nepal Silage Seller. Ensuring superior nutrition for livestock.",
-    siteName: process.env.COMPANY_NAME,
+    siteName: process.env.NEXT_PUBLIC_COMPANY_NAME,
     images: [
       {
         url: "/img1.jpg",
         width: 1200,
         height: 630,
-        alt: `${process.env.COMPANY_NAME} cover page`,
+        alt: `${process.env.NEXT_PUBLIC_COMPANY_NAME} cover page`,
       },
     ],
     locale: "en_US",

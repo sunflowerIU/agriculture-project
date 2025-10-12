@@ -9,6 +9,10 @@ const navItems = [
     name: "Products And Services",
     href: "/products",
   },
+  {
+    name: "Feeder",
+    href: "/feeder",
+  },
 
   {
     name: "Gallery",
@@ -40,9 +44,9 @@ const navItemsClass = `
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
-  console.log(navRef);
 
   useEffect(() => {
+    //turn off nav when clicking outside
     function handleClickOutside(e) {
       if (navRef && !navRef.current.contains(e.target)) {
         // console.log(navRef);
@@ -51,6 +55,7 @@ function Navigation() {
     }
 
     window.addEventListener("click", handleClickOutside);
+
     return () => window.removeEventListener("click", handleClickOutside);
   }, []);
 
@@ -63,7 +68,7 @@ function Navigation() {
         {/* logo */}
         <Logo setIsOpen={setIsOpen} />
         {/* desktop nav */}
-        <ul className="hidden flex-row justify-between gap-2 font-semibold md:flex">
+        <ul className="hidden flex-row justify-between gap-1 font-semibold md:flex lg:gap-5">
           {navItems.map((items) => (
             <Link
               onClick={() => setIsOpen(false)}
