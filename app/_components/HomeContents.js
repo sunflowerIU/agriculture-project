@@ -49,7 +49,7 @@ export default function HomeContent() {
         </div>
 
         {/* Right side - carousel */}
-        <div className="relative min-h-[220px] w-full overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] md:min-h-[340px] lg:min-h-[400px] lg:w-1/2">
+        <div className="md:min-h-[340px]lg:w-full relative mx-auto min-h-[220px] w-sm overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] md:w-2xl lg:min-h-[400px] lg:w-1/2">
           {images.map((src, index) => (
             <motion.div
               key={index}
@@ -79,16 +79,16 @@ export default function HomeContent() {
           </h1>
           <p className="mx-auto mt-4 max-w-md text-base text-gray-700 sm:text-lg lg:mx-0">
             <FaQuoteLeft className="mr-2 inline text-green-700" />
-            At {process.env.COMPANY_NAME}, we are driven by a mission to empower
-            farmers with sustainable, high-quality fodder solutions. Our vision
-            is not only to provide feed but also to nurture the prosperity of
-            every livestock owner we serve.
+            At {process.env.NEXT_PUBLIC_COMPANY_NAME}, we are driven by a
+            mission to empower farmers with sustainable, high-quality fodder
+            solutions. Our vision is not only to provide feed but also to
+            nurture the prosperity of every livestock owner we serve.
           </p>
           <p className="mt-4 font-semibold text-green-800">&#x2D; CEO Name</p>
         </div>
 
         {/* Right side - photo */}
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl shadow-lg sm:max-w-sm">
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl shadow-lg lg:max-w-sm">
           <Image
             src={ceoImg}
             alt="CEO"
