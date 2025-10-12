@@ -49,7 +49,7 @@ export default function HomeContent() {
         </div>
 
         {/* Right side - carousel */}
-        <div className="md:min-h-[340px]lg:w-full relative mx-auto min-h-[220px] w-sm overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] md:w-2xl lg:min-h-[400px] lg:w-1/2">
+        <div className="relative mx-auto min-h-[220px] w-xs overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] md:min-h-[340px] md:w-2xl lg:min-h-[400px] lg:w-1/2">
           {images.map((src, index) => (
             <motion.div
               key={index}
