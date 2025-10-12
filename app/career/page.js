@@ -1,5 +1,34 @@
 import Button from "../_components/Button";
-
+export const metadata = {
+  title: process.env.NEXT_PUBLIC_COMPANY_NAME,
+  description: `Welcome to ${process.env.NEXT_PUBLIC_COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
+  keywords: [
+    "Corn Silage Nepal",
+    "Quality CornMeal Silage",
+    "Livestock Feed",
+    "Premium Silage Supplier",
+    "Best Corn Silage",
+    "careers at corn silage company",
+    "jobs in agriculture Nepal",
+    "farm jobs Nepal",
+  ],
+  openGraph: {
+    title: `Premium Corn Silage & CornMeal | ${process.env.NEXT_PUBLIC_COMPANY_NAME}`,
+    description:
+      "Discover high-quality Corn Silage and CornMeal Silage from Nepal Silage Seller. Ensuring superior nutrition for livestock.",
+    siteName: process.env.NEXT_PUBLIC_COMPANY_NAME,
+    images: [
+      {
+        url: "/cover.png",
+        width: 1200,
+        height: 630,
+        alt: `${process.env.NEXT_PUBLIC_COMPANY_NAME} cover page`,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 const jobs = [
   {
     title: "Sales & Marketing Officer",

@@ -3,6 +3,33 @@ import Button from "../_components/Button";
 import fodderImg from "@/public/fodder.jpg";
 import cornSilageImg from "@/public/corn-silage.jpg";
 
+export const metadata = {
+  title: process.env.NEXT_PUBLIC_COMPANY_NAME,
+  description: `Welcome to ${process.env.NEXT_PUBLIC_COMPANY_NAME}. Nepal’s trusted provider of high-quality Corn Silage and CornMeal Silage. Explore our premium products and boost livestock productivity.`,
+  keywords: [
+    "Corn Silage Nepal",
+    "Quality CornMeal Silage",
+    "Livestock Feed",
+    "Premium Silage Supplier",
+    "Best Corn Silage",
+  ],
+  openGraph: {
+    title: `Premium Corn Silage & CornMeal | ${process.env.NEXT_PUBLIC_COMPANY_NAME}`,
+    description:
+      "Discover high-quality Corn Silage and CornMeal Silage from Nepal Silage Seller. Ensuring superior nutrition for livestock.",
+    siteName: process.env.NEXT_PUBLIC_COMPANY_NAME,
+    images: [
+      {
+        url: "/cover.png",
+        width: 1200,
+        height: 630,
+        alt: `${process.env.NEXT_PUBLIC_COMPANY_NAME} cover page`,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 export default function FeederPage() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-8 lg:px-8">
