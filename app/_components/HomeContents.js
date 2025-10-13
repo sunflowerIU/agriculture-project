@@ -10,7 +10,7 @@ import Button from "../_components/Button";
 import img1 from "@/public/img1.jpg";
 import img2 from "@/public/img2.jpg";
 import img3 from "@/public/img3.jpg";
-import ceoImg from "@/public/profile1.jpg";
+import ceoImg from "@/public/profile2.jpg";
 import { FaBullseye } from "react-icons/fa6";
 
 const images = [img1, img2, img3];
@@ -26,22 +26,20 @@ export default function HomeContent() {
   }, []);
 
   return (
-    <div className="text-text mx-auto mt-10 w-full">
+    <div className="text-text mx-auto mt-10 w-full space-y-10">
       {/* Hero with carousel */}
-      <section className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 lg:flex-row lg:items-center lg:gap-12">
+      <section className="relative mx-auto flex max-w-6xl px-1 py-6 text-xs sm:gap-4 sm:px-4 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
         {/* Left side - text */}
-        <div className="mx-auto flex max-w-[500px] min-w-[260px] flex-col justify-center text-center lg:mx-0 lg:w-1/2 lg:text-left">
-          <h1 className="text-primary text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
+        <div className="mx-auto flex max-w-1/3 flex-col justify-center px-2 text-center sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2 lg:text-left">
+          <h1 className="text-primary text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
             Welcome to {process.env.NEXT_PUBLIC_COMPANY_NAME}
           </h1>
-          <p className="mx-auto mt-4 max-w-md text-base text-gray-700 sm:text-lg lg:mx-0">
+          <p className="mx-auto mt-4 text-gray-700">
             We provide premium-quality corn silage and feed solutions for your
             livestock — fresh, nutritious, and sustainable.
           </p>
-          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
-            <Button href="/contact" variant="primary">
-              Contact Us
-            </Button>
+          <div className="mx-auto flex max-w-fit flex-col justify-center md:flex-row md:gap-6 lg:items-start lg:gap-8">
+            <Button href="/contact">Contact Us</Button>
             <Button href="/gallery" variant="secondary">
               View Gallery
             </Button>
@@ -49,7 +47,7 @@ export default function HomeContent() {
         </div>
 
         {/* Right side - carousel */}
-        <div className="relative mx-auto min-h-[220px] w-xs overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] md:min-h-[340px] md:w-2xl lg:min-h-[400px] lg:w-1/2">
+        <div className="h-sm relative mx-auto w-3/5 overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] sm:w-xs md:min-h-[340px] md:w-md lg:w-1/3">
           {images.map((src, index) => (
             <motion.div
               key={index}
@@ -69,15 +67,15 @@ export default function HomeContent() {
           ))}
         </div>
       </section>
-      {/* CEO Message */}
 
-      <section className="relative mx-auto flex w-full flex-col gap-4 bg-white px-2 py-10 lg:flex-row-reverse lg:items-center lg:gap-10">
+      {/* CEO Message */}
+      <section className="relative mx-auto flex max-w-6xl flex-row-reverse gap-6 px-4 py-6 text-xs sm:px-6 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
         {/* Left side - text */}
-        <div className="mx-auto flex max-w-[500px] min-w-[260px] flex-col justify-center text-center lg:text-left">
-          <h1 className="text-primary text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
+        <div className="mx-auto flex max-w-1/2 flex-col justify-center text-left sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2">
+          <h1 className="text-primary text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
             Message from Our CEO
           </h1>
-          <p className="mx-auto mt-4 max-w-md text-base text-gray-700 sm:text-lg lg:mx-0">
+          <p className="mx-auto mt-4 text-gray-700 lg:mx-0">
             <FaQuoteLeft className="mr-2 inline text-green-700" />
             At {process.env.NEXT_PUBLIC_COMPANY_NAME}, we are driven by a
             mission to empower farmers with sustainable, high-quality fodder
@@ -88,12 +86,12 @@ export default function HomeContent() {
         </div>
 
         {/* Right side - photo */}
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-xl shadow-lg lg:max-w-sm">
+        <div className="relative mx-auto min-h-[200px] w-1/2 overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] sm:w-xs md:min-h-[340px] md:w-md lg:w-1/3">
           <Image
             src={ceoImg}
             alt="CEO"
             fill
-            className="object-cover object-center"
+            className="object-cover"
             placeholder="blur"
             priority
           />
@@ -101,28 +99,38 @@ export default function HomeContent() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="mb-12 text-center text-3xl font-bold text-green-900">
-          Our Mission & Vision
-        </h2>
-        <div className="grid gap-12 md:grid-cols-2">
-          <div className="rounded-xl bg-white p-6 shadow-md">
-            <h3 className="mb-4 flex flex-col items-center text-2xl font-semibold text-green-800">
-              <FaBullseye />
+      <section className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-xs sm:px-6 sm:py-12 sm:text-sm lg:flex-row lg:items-center lg:gap-12 lg:py-16 lg:text-lg">
+        {/* Left side - text */}
+        <div className="mx-auto flex w-full max-w-[500px] flex-col justify-center text-center lg:mx-0 lg:w-1/2 lg:text-left">
+          <h1 className="text-primary mb-4 text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
+            Our Mission & Vision
+          </h1>
+          <p className="mx-auto mb-6 max-w-md text-gray-700 sm:text-lg lg:mx-0">
+            We are committed to empowering farmers and livestock owners with
+            innovative, sustainable, and high-quality feed solutions. Our
+            mission and vision drive us to set new standards in Nepal’s
+            agricultural sector.
+          </p>
+        </div>
+        {/* Right side - cards */}
+        <div className="mx-auto flex w-full max-w-2xl flex-col gap-6 sm:flex-row lg:w-1/2">
+          <div className="flex-1 rounded-xl bg-white p-6 shadow-md">
+            <h3 className="mb-4 flex flex-col items-center text-lg font-semibold text-green-800">
+              <FaBullseye className="mb-1 text-2xl" />
               <span>Our Mission</span>
             </h3>
-            <p className="leading-relaxed text-gray-700">
+            <p className="text-sm leading-relaxed text-gray-700">
               To provide farmers with innovative, reliable, and sustainable
               silage solutions that enhance livestock health, increase
               productivity, and secure a brighter agricultural future.
             </p>
           </div>
-          <div className="rounded-xl bg-white p-6 shadow-md">
-            <h3 className="mb-4 flex flex-col items-center text-2xl font-semibold text-green-800">
-              <FaRegLightbulb />
+          <div className="flex-1 rounded-xl bg-white p-6 shadow-md">
+            <h3 className="mb-4 flex flex-col items-center text-lg font-semibold text-green-800">
+              <FaRegLightbulb className="mb-1 text-2xl" />
               <span>Our Vision</span>
             </h3>
-            <p className="leading-relaxed text-gray-700">
+            <p className="text-sm leading-relaxed text-gray-700">
               To be recognized as Nepal’s most trusted provider of cattle feed
               solutions — setting new standards for quality, sustainability, and
               customer satisfaction across the agricultural sector.

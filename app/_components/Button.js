@@ -11,7 +11,7 @@ export default function Button({
 }) {
   // Define variant styles
   const baseClasses =
-    "inline-block font-semibold px-6 py-3 rounded-lg hover:scale-110  shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-400 mt-6 cursor-pointer";
+    "inline-block font-semibold px-2 sm:px-6 py-3 rounded-lg hover:scale-110  shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-400 mt-6 cursor-pointer";
 
   const variants = {
     primary: "bg-primary hover:bg-lime-600 text-lime-50",

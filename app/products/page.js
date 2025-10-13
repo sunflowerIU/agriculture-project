@@ -17,32 +17,34 @@ export const metadata = {
 
 export default function Products() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-8 lg:px-8">
+    <section className="mx-auto max-w-7xl px-2 py-6 text-xs sm:px-4 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
       {/* Hero Section */}
       <div className="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <h1 className="text-primary text-4xl font-bold sm:text-5xl">
+          <h1 className="text-primary text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
             Premium Quality Corn Silage
           </h1>
-          <p className="text-text mt-6 text-lg">
+          <p className="text-text mt-4">
             Our corn silage is harvested at the right stage and preserved under
             ideal conditions to provide your cattle with the best nutrition.
             Rich in energy, fiber, and digestibility, it helps boost milk yield
             and livestock health.
           </p>
 
-          <ul className="text-text mt-6 space-y-3">
+          <ul className="text-text mt-4 space-y-3">
             <li>✅ High nutritional value with optimal starch content</li>
             <li>✅ Naturally fermented for improved digestibility</li>
             <li>✅ Long shelf life with proper preservation</li>
             <li>✅ Suitable for dairy cows, buffaloes, and other livestock</li>
           </ul>
 
-          <Button href="/contact">Contact Us</Button>
+          <Button href="/contact" variant="small">
+            Contact Us
+          </Button>
         </div>
 
         {/* Product Image */}
-        <div className="relative h-[350px] w-full sm:h-[450px]">
+        <div className="relative h-[220px] w-full sm:h-[280px] md:h-[340px] lg:h-[400px]">
           <Image
             placeholder="blur"
             src={cornSilage}
@@ -55,8 +57,8 @@ export default function Products() {
       </div>
 
       {/* Benefits Section */}
-      <div className="mt-20">
-        <h2 className="text-primary text-3xl font-bold sm:text-4xl">
+      <div className="mt-16">
+        <h2 className="text-primary text-base font-bold sm:text-2xl lg:text-4xl">
           Why Choose Our Corn Silage?
         </h2>
         <p className="text-text mt-4 max-w-3xl">

@@ -38,8 +38,8 @@ export const metadata = {
 export default function Home() {
   // console.log(process.env.NEXT_PUBLIC_COMPANY_NAME);
   return (
-    <div className="w-full text-lime-50">
-      <header className="shadow-primary relative h-[500px] shadow-sm">
+    <div className="w-full text-xs text-lime-50 sm:text-sm lg:text-lg">
+      <header className="shadow-primary relative h-[400px] shadow-sm sm:h-[500px]">
         <Image
           src={cover}
           priority
@@ -52,11 +52,11 @@ export default function Home() {
         <div className="bg-primary/10 absolute inset-0 -z-5"></div>
 
         {/* Overlay content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 px-4 text-center">
-          <h1 className="text-4xl font-bold drop-shadow-lg md:text-6xl">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-2 text-center">
+          <h1 className="text-primary bg-secondary text-bold rounded-xl px-4 py-1 text-xl leading-tight font-bold drop-shadow-lg sm:text-3xl lg:text-5xl">
             Welcome to Our Farm
           </h1>
-          <p className="mt-4 max-w-2xl text-lg drop-shadow-md md:text-2xl">
+          <p className="mt-2 max-w-2xl drop-shadow-md">
             Discover premium-quality corn silage and feed solutions for your
             livestock. Fresh, nutritious, and grown with care to maximize
             productivity and sustainability.

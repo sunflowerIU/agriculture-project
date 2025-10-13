@@ -10,7 +10,7 @@ import Button from "../_components/Button";
 import img1 from "@/public/img1.jpg";
 import img2 from "@/public/img2.jpg";
 import img3 from "@/public/img3.jpg";
-import ceoImg from "@/public/profile1.jpg";
+import ceoImg from "@/public/profile2.jpg";
 import { FaBullseye } from "react-icons/fa6";
 
 const images = [img1, img2, img3];
@@ -28,17 +28,17 @@ export default function HomeContent() {
   return (
     <div className="text-text mx-auto mt-10 w-full">
       {/* Hero with carousel */}
-      <section className="relative mx-auto flex max-w-7xl flex-col gap-8 px-8 py-20 lg:flex-row lg:items-center">
+      <section className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 lg:flex-row lg:items-center lg:gap-12">
         {/* Left side - text */}
-        <div className="mx-auto flex max-w-[600px] min-w-[300px] flex-col justify-center text-center lg:mx-0 lg:w-1/2 lg:text-left">
-          <h1 className="text-primary text-4xl leading-tight font-bold sm:text-5xl md:text-6xl">
-            Welcome to {process.env.COMPANY_NAME}
+        <div className="mx-auto flex max-w-[500px] min-w-[260px] flex-col justify-center text-center lg:mx-0 lg:w-1/2 lg:text-left">
+          <h1 className="text-primary text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
+            Welcome to {process.env.NEXT_PUBLIC_COMPANY_NAME}
           </h1>
-          <p className="mx-auto mt-6 max-w-lg text-lg text-gray-700 sm:text-xl lg:mx-0">
+          <p className="mx-auto mt-4 max-w-md text-base text-gray-700 sm:text-lg lg:mx-0">
             We provide premium-quality corn silage and feed solutions for your
             livestock — fresh, nutritious, and sustainable.
           </p>
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <Button href="/contact" variant="primary">
               Contact Us
             </Button>
@@ -49,7 +49,7 @@ export default function HomeContent() {
         </div>
 
         {/* Right side - carousel */}
-        <div className="relative min-h-[300px] w-full overflow-hidden rounded-xl shadow-lg sm:min-h-[350px] md:min-h-[400px] lg:min-h-[500px] lg:w-1/2">
+        <div className="relative mx-auto min-h-[220px] w-xs overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] md:min-h-[340px] md:w-2xl lg:min-h-[400px] lg:w-1/2">
           {images.map((src, index) => (
             <motion.div
               key={index}
@@ -71,29 +71,29 @@ export default function HomeContent() {
       </section>
       {/* CEO Message */}
 
-      <section className="relative mx-auto flex w-full flex-col gap-6 bg-white px-4 py-20 lg:flex-row-reverse lg:items-center">
+      <section className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 lg:flex-row lg:items-center lg:gap-12">
         {/* Left side - text */}
-        <div className="mx-auto flex max-w-[600px] min-w-[300px] flex-col justify-center text-center lg:text-left">
-          <h1 className="text-primary text-4xl leading-tight font-bold sm:text-5xl md:text-6xl">
+        <div className="mx-auto flex max-w-[500px] min-w-[260px] flex-col justify-center text-center lg:text-left">
+          <h1 className="text-primary text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
             Message from Our CEO
           </h1>
-          <p className="mx-auto mt-6 max-w-lg text-lg text-gray-700 sm:text-xl lg:mx-0">
+          <p className="mx-auto mt-4 max-w-md text-base text-gray-700 sm:text-lg lg:mx-0">
             <FaQuoteLeft className="mr-2 inline text-green-700" />
-            At {process.env.COMPANY_NAME}, we are driven by a mission to empower
-            farmers with sustainable, high-quality fodder solutions. Our vision
-            is not only to provide feed but also to nurture the prosperity of
-            every livestock owner we serve.
+            At {process.env.NEXT_PUBLIC_COMPANY_NAME}, we are driven by a
+            mission to empower farmers with sustainable, high-quality fodder
+            solutions. Our vision is not only to provide feed but also to
+            nurture the prosperity of every livestock owner we serve.
           </p>
-          <p className="mt-6 font-semibold text-green-800">&#x2D; CEO Name</p>
+          <p className="mt-4 font-semibold text-green-800">&#x2D; CEO Name</p>
         </div>
 
         {/* Right side - photo */}
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl shadow-lg sm:max-w-md">
+        <div className="relative mx-auto min-h-[220px] w-xs overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] md:min-h-[340px] md:w-2xl lg:min-h-[400px] lg:w-1/2">
           <Image
             src={ceoImg}
             alt="CEO"
             fill
-            className="object-cover object-center"
+            className="object-cover"
             placeholder="blur"
             priority
           />

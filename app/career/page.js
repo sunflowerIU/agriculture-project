@@ -55,13 +55,13 @@ const jobs = [
 
 export default function CareerPage() {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-12 sm:px-8">
+    <section className="mx-auto max-w-4xl px-2 py-6 text-xs sm:px-4 sm:py-8 sm:text-sm lg:py-12 lg:text-lg">
       {/* Hero Section */}
-      <div className="mb-10 text-center">
-        <h1 className="text-primary mb-4 text-4xl font-bold sm:text-5xl">
+      <div className="mb-8 text-center">
+        <h1 className="text-primary mb-4 text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
           Join Our Team
         </h1>
-        <p className="text-text mb-2 text-lg">
+        <p className="text-text mb-2">
           Be part of Nepal’s leading provider of sustainable feed solutions.
           We’re looking for passionate, driven individuals to help us grow and
           make a difference in agriculture.
@@ -70,28 +70,32 @@ export default function CareerPage() {
           Explore our open positions below or send us your CV for future
           opportunities.
         </p>
-        <Button href="/contact" variant="primary">
+        <Button href="/contact" variant="small">
           Contact HR
         </Button>
       </div>
 
       {/* Open Positions */}
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2">
         {jobs.map((job, idx) => (
           <div
             key={idx}
-            className="flex flex-col justify-between rounded-xl border border-lime-100 bg-white p-6 shadow-md"
+            className="flex flex-col justify-between rounded-xl border border-lime-100 bg-white p-4 shadow-md"
           >
             <div>
-              <h2 className="mb-2 text-2xl font-semibold text-green-800">
+              <h2 className="mb-2 text-base font-bold text-green-800 sm:text-xl lg:text-2xl">
                 {job.title}
               </h2>
-              <div className="mb-2 text-sm text-gray-500">
+              <div className="mb-2 text-xs text-gray-500 sm:text-sm">
                 {job.location} &bull; {job.type}
               </div>
               <p className="text-text mb-4">{job.description}</p>
             </div>
-            <Button href="/contact" variant="secondary" className="w-fit">
+            <Button
+              href="/contact"
+              variant="secondary"
+              className="w-fit text-xs sm:text-sm lg:text-base"
+            >
               Apply Now
             </Button>
           </div>
@@ -99,15 +103,19 @@ export default function CareerPage() {
       </div>
 
       {/* General Application */}
-      <div className="mt-12 rounded-xl bg-lime-50 p-6 text-center shadow-sm">
-        <h3 className="text-primary mb-2 text-xl font-semibold">
+      <div className="mt-10 rounded-xl bg-lime-50 p-4 text-center shadow-sm">
+        <h3 className="text-primary mb-2 text-base font-bold sm:text-xl lg:text-2xl">
           Didn’t find your role?
         </h3>
         <p className="text-text mb-4">
           We’re always looking for talented people. Send us your CV and we’ll
           reach out when a suitable position opens up.
         </p>
-        <Button href="/contact" variant="outline">
+        <Button
+          href="/contact"
+          variant="outline"
+          className="text-xs sm:text-sm lg:text-base"
+        >
           Send CV
         </Button>
       </div>

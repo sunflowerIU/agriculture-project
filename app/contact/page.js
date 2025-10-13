@@ -29,17 +29,19 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="bg-secondary px-4 py-10 sm:px-6">
+    <section className="bg-secondary px-2 py-6 text-xs sm:px-4 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-primary mb-10 text-center text-3xl font-bold">
+        <h1 className="text-primary mb-8 text-center text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
           Contact Us
         </h1>
 
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           {/* Contact Info */}
-          <div className="text-primary rounded-2xl border-1 border-lime-500 p-6 shadow-lg">
-            <h2 className="mb-4 text-xl font-semibold">Get in Touch</h2>
-            <ul className="space-y-4 text-sm">
+          <div className="text-primary rounded-2xl border-1 border-lime-500 p-4 shadow-lg">
+            <h2 className="mb-3 text-base font-bold sm:text-xl lg:text-2xl">
+              Get in Touch
+            </h2>
+            <ul className="space-y-2 text-xs sm:text-sm lg:text-base">
               <li className="flex items-center gap-3">
                 <FaEnvelope />
                 support@nepaldigitalbazar.com
@@ -57,7 +59,7 @@ export default function ContactPage() {
 
             <SocialMedia />
 
-            <p className="mt-6">
+            <p className="mt-4">
               We’ll get back to you within 24 hours on working days.
             </p>
           </div>

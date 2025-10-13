@@ -35,7 +35,7 @@ const navItems = [
 ];
 
 const navItemsClass = `
-  relative px-3 py-2 font-medium text-lime-50
+  relative px-2 py-1 font-medium text-lime-50 text-xs sm:text-sm lg:text-lg
   after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0
   after:bg-lime-200 after:transition-all after:duration-300
   hover:after:w-full hover:text-lime-200
@@ -68,7 +68,7 @@ function Navigation() {
         {/* logo */}
         <Logo setIsOpen={setIsOpen} />
         {/* desktop nav */}
-        <ul className="hidden flex-row justify-between gap-1 font-semibold md:flex lg:gap-5">
+        <ul className="hidden flex-row justify-between gap-1 font-semibold md:flex lg:gap-4">
           {navItems.map((items) => (
             <Link
               onClick={() => setIsOpen(false)}
@@ -99,7 +99,7 @@ function Navigation() {
         id="mobile-nav"
         className={`bg-primary absolute w-full overflow-hidden transition-all duration-500 ease-in-out md:max-h-0 md:opacity-0 ${isOpen ? "z-100 max-h-screen border-t border-b p-4 opacity-100" : "max-h-0 opacity-0"} `}
       >
-        <ul className="flex flex-col space-y-3">
+        <ul className="flex flex-col space-y-2">
           {navItems.map((items) => (
             <Link
               role="menuitem"
