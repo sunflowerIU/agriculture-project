@@ -13,13 +13,15 @@ import {
   Text,
 } from "@react-email/components";
 
-const baseUrl = process.env.SITE_URL;
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const EmailTemplate = ({ name, email, message, phone }) => (
   <Html>
     <Head />
     <Body style={main}>
-      <Preview>{process.env.COMPANY_NAME} - New Contact Message</Preview>
+      <Preview>
+        {process.env.NEXT_PUBLIC_COMPANY_NAME} - New Contact Message
+      </Preview>
       <Container style={container}>
         {/* Header */}
         <Section style={headerSection}>
@@ -30,9 +32,11 @@ export const EmailTemplate = ({ name, email, message, phone }) => (
                 src={`${baseUrl}/logo.png`}
                 width="100"
                 height="100"
-                alt={process.env.COMPANY_NAME}
+                alt={process.env.NEXT_PUBLIC_COMPANY_NAME}
               />
-              <Text style={companyName}>{process.env.COMPANY_NAME}</Text>
+              <Text style={companyName}>
+                {process.env.NEXT_PUBLIC_COMPANY_NAME}
+              </Text>
             </Column>
           </Row>
         </Section>
