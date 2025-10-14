@@ -21,11 +21,10 @@ export async function sendEmail(formData) {
   }
 
   try {
-    const domain = process.env.NEXT_PUBLIC_SITE_URL.replace(/^https?:\/\//, "");
-    const from = `${process.env.NEXT_PUBLIC_COMPANY_NAME} <no-reply@${domain}>`;
     const { data, error } = await resend.emails.send({
       // TODO: Replace with your real sender address/domain
-      from,
+      from: `${process.env.NEXT_PUBLIC_COMPANY_NAME} +
+        <no-reply@${process.env.NEXT_PUBLIC_SITE_DOMAIN}>`,
       // from: "Acme <onboarding@resend.dev>",
       to: ["amittamang423@gmail.com"],
       subject: `Message from ${name} via ${process.env.NEXT_PUBLIC_COMPANY_NAME} website`,
