@@ -23,10 +23,11 @@ export async function sendEmail(formData) {
   try {
     const { data, error } = await resend.emails.send({
       // TODO: Replace with your real sender address/domain
-      from: `${process.env.NEXT_PUBLIC_COMPANY_NAME} +
-        <no-reply@${siteUrl}>`,
+      // from: `${process.env.NEXT_PUBLIC_COMPANY_NAME} +
+      //   <no-reply@${siteUrl}>`,
+      from: "Acme <onboarding@resend.dev>",
       to: ["amittamang423@gmail.com"],
-      subject: { message },
+      subject: `Message from ${name} via ${process.env.NEXT_PUBLIC_COMPANY_NAME} website`,
       react: (
         <EmailTemplate
           name={name}
