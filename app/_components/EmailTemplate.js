@@ -30,8 +30,8 @@ export const EmailTemplate = ({ name, email, message, phone }) => (
               <Img
                 style={logoImg}
                 src={`${baseUrl}/logo.png`}
-                width="120"
-                height="32"
+                width="100"
+                height="100"
                 alt={process.env.NEXT_PUBLIC_COMPANY_NAME}
               />
               <Text style={companyName}>
