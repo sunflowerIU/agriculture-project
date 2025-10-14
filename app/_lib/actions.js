@@ -23,13 +23,10 @@ export async function sendEmail(formData) {
   try {
     const { data, error } = await resend.emails.send({
       // TODO: Replace with your real sender address/domain
-      from:
-        process.env.NEXT_PUBLIC_COMPANY_NAME +
-        " <no-reply@" +
-        process.env.NEXT_PUBLIC_SITE_URL.replace(/^https?:\/\//, "") +
-        ">",
+      from: `${process.env.NEXT_PUBLIC_COMPANY_NAME} +
+        <no-reply@${siteUrl}>`,
       to: ["amittamang423@gmail.com"],
-      subject: "Your work website",
+      subject: { message },
       react: (
         <EmailTemplate
           name={name}

@@ -13,7 +13,7 @@ import {
   Text,
 } from "@react-email/components";
 
-// const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const EmailTemplate = ({ name, email, message, phone }) => (
   <Html>
@@ -24,13 +24,13 @@ export const EmailTemplate = ({ name, email, message, phone }) => (
         <Section>
           <Row>
             <Column>
-              {/* <Img
+              <Img
                 style={sectionLogo}
-                src={`${baseUrl}/static/google-play-logo.png`}
+                src={`${baseUrl}/logo.png`}
                 width="155"
                 height="31"
-                alt="Google Play"
-              /> */}
+                alt={process.env.COMPANY_NAME}
+              />
             </Column>
           </Row>
         </Section>
@@ -56,9 +56,9 @@ const main = {
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
-// const sectionLogo = {
-//   padding: "0 40px",
-// };
+const sectionLogo = {
+  padding: "0 40px",
+};
 
 const container = {
   margin: "30px auto",
