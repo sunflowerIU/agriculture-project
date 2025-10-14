@@ -66,7 +66,7 @@ function AboutContent() {
           opportunities.
         </p>
         <div className="flex justify-center">
-          <Button href="/careers">Explore Careers</Button>
+          <Button href="/career">Explore Careers</Button>
         </div>
       </section>
 
