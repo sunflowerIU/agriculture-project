@@ -70,9 +70,7 @@ export default function CareerPage() {
           Explore our open positions below or send us your CV for future
           opportunities.
         </p>
-        <Button href="/contact" variant="small">
-          Contact HR
-        </Button>
+        <Button href="/contact">Contact HR</Button>
       </div>
 
       {/* Open Positions */}

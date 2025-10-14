@@ -38,9 +38,7 @@ export default function Products() {
             <li>✅ Suitable for dairy cows, buffaloes, and other livestock</li>
           </ul>
 
-          <Button href="/contact" variant="small">
-            Contact Us
-          </Button>
+          <Button href="/contact">Contact Us</Button>
         </div>
 
         {/* Product Image */}
