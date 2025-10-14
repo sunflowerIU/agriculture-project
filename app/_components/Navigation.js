@@ -10,8 +10,8 @@ const navItems = [
     href: "/products",
   },
   {
-    name: "Feeder",
-    href: "/feeder",
+    name: "Cattle Feed",
+    href: "/feed",
   },
 
   {
@@ -26,11 +26,6 @@ const navItems = [
   {
     name: "Contact Us",
     href: "/contact",
-  },
-
-  {
-    name: "Career",
-    href: "/career",
   },
 ];
 

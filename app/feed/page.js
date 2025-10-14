@@ -61,7 +61,7 @@ export default function FeederPage() {
               Balanced blends for optimal animal growth and health.
             </li>
           </ul>
-          <Button href="/contact" variant="small">
+          <Button href="/contact" variant="primary">
             Contact for Bulk Orders
           </Button>
         </div>

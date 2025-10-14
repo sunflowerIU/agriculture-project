@@ -1,11 +1,10 @@
 "use client";
 
-import profile1 from "@/public/profile1.jpg";
-import profile2 from "@/public/profile2.jpg";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { FaQuoteLeft } from "react-icons/fa";
 import ContactFooter from "./ContactFooter";
+import TeamSection from "./TeamSection";
+import Testimonials from "./Testimonials";
+import Button from "./Button";
 
 function AboutContent() {
   return (
@@ -50,77 +49,27 @@ function AboutContent() {
       </section>
 
       {/* Team Section */}
-      <section className="bg-gray-50 py-10">
-        <div className="mx-auto max-w-6xl px-4 text-center">
-          <h2 className="mb-8 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
-            Meet Our Team
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-            {[1, 2, 3].map((id) => (
-              <motion.div
-                key={id}
-                whileHover={{ scale: 1.05 }}
-                className="rounded-2xl bg-white p-4 shadow-lg"
-              >
-                <Image
-                  src={profile1}
-                  alt="Team member"
-                  width={120}
-                  height={120}
-                  className="mx-auto rounded-full"
-                />
-                <h3 className="mt-3 font-semibold text-green-800">John Doe</h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base">
-                  Position Title
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamSection />
 
       {/* Testimonials */}
-      <section className="bg-white py-10">
-        <div className="mx-auto max-w-6xl px-4 text-center">
-          <h2 className="mb-8 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
-            What Our Clients Say
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((id) => (
-              <motion.div
-                key={id}
-                whileHover={{ scale: 1.05 }}
-                className="rounded-2xl border border-gray-200 bg-gray-50 p-4 text-left shadow-md"
-              >
-                <FaQuoteLeft className="text-lg text-green-700 opacity-70 sm:text-xl lg:text-2xl" />
-                <p className="mt-3 text-xs text-gray-700 sm:text-sm lg:text-base">
-                  &ldquo;This company has truly exceeded our expectations. The
-                  quality of their service and dedication is unmatched.&ldquo;
-                </p>
-                <div className="mt-4 flex items-center gap-3">
-                  <Image
-                    src={profile2}
-                    alt="Client"
-                    width={36}
-                    height={36}
-                    className="rounded-full"
-                  />
-                  <div>
-                    <h4 className="text-xs font-semibold text-green-800 sm:text-sm lg:text-base">
-                      Jane Smith
-                    </h4>
-                    <p className="text-xs text-gray-500 sm:text-sm">
-                      Happy Customer
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+      <Testimonials />
+
+      {/* Careers Section */}
+      <section className="mx-auto max-w-4xl px-4 py-8 text-center">
+        <h2 className="mb-4 text-xl font-bold text-green-900 sm:text-2xl lg:text-3xl">
+          Join Our Team
+        </h2>
+        <p className="mb-6 text-gray-700">
+          We are always looking for passionate and talented individuals to join
+          our growing team. If you are driven by innovation and want to make a
+          difference in the agriculture industry, explore our career
+          opportunities.
+        </p>
+        <div className="flex justify-center">
+          <Button href="/careers">Explore Careers</Button>
         </div>
       </section>
 
-      {/* Call to Action */}
       <ContactFooter />
     </div>
   );

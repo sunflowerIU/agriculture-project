@@ -10,7 +10,7 @@ import Button from "../_components/Button";
 import img1 from "@/public/img1.jpg";
 import img2 from "@/public/img2.jpg";
 import img3 from "@/public/img3.jpg";
-import ceoImg from "@/public/profile2.jpg";
+import ceoImg from "@/public/team/ceo.jpg";
 import { FaBullseye } from "react-icons/fa6";
 
 const images = [img1, img2, img3];
@@ -73,7 +73,7 @@ export default function HomeContent() {
         {/* Left side - text */}
         <div className="mx-auto flex max-w-1/2 flex-col justify-center text-left sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2">
           <h1 className="text-primary text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
-            Message from Our CEO
+            Message from Our Director
           </h1>
           <p className="mx-auto mt-4 text-gray-700 lg:mx-0">
             <FaQuoteLeft className="mr-2 inline text-green-700" />
@@ -82,7 +82,9 @@ export default function HomeContent() {
             solutions. Our vision is not only to provide feed but also to
             nurture the prosperity of every livestock owner we serve.
           </p>
-          <p className="mt-4 font-semibold text-green-800">&#x2D; CEO Name</p>
+          <p className="mt-4 font-semibold text-green-800">
+            &#x2D; Mr. Gopal Thapa
+          </p>
         </div>
 
         {/* Right side - photo */}
