@@ -28,7 +28,9 @@ function PhoneNumber() {
             )}
             {/* clickable contact */}
             {details.type === "phone" ? (
-              <a href={`tel:${details.contact}`}>{details.contact}</a>
+              <a href={`tel:${details.contact}`}>
+                {details.contact} <span className="text-red-500">call now</span>
+              </a>
             ) : (
               <a href={`mailto:${details.contact}`}>{details.contact}</a>
             )}
