@@ -44,11 +44,15 @@ export default function ContactPage() {
             <ul className="space-y-2 text-xs sm:text-sm lg:text-base">
               <li className="flex items-center gap-3">
                 <FaEnvelope />
-                support@nepaldigitalbazar.com
+                <a href={`mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL}`}>
+                  {process.env.NEXT_PUBLIC_BUSINESS_EMAIL}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaPhone />
-                +977-9800000000
+                <a href={`tel:${process.env.NEXT_PUBLIC_BUSINESS_PHONE}`}>
+                  {process.env.NEXT_PUBLIC_BUSINESS_PHONE}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaMapLocationDot />

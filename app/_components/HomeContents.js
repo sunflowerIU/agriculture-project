@@ -7,10 +7,10 @@ import { FaQuoteLeft, FaRegLightbulb } from "react-icons/fa";
 import Button from "../_components/Button";
 
 // Import images from /public
-import img1 from "@/public/img1.jpg";
-import img2 from "@/public/img2.jpg";
-import img3 from "@/public/img3.jpg";
-import ceoImg from "@/public/team/ceo.jpg";
+import img1 from "@/public/silage-section2.jpg";
+import img2 from "@/public/gallery/products/img2.jpg";
+import img3 from "@/public/gallery/products/img3.jpg";
+import chairmanImg from "@/public/team/chairman.jpg";
 import { FaBullseye } from "react-icons/fa6";
 
 const images = [img1, img2, img3];
@@ -73,7 +73,7 @@ export default function HomeContent() {
         {/* Left side - text */}
         <div className="mx-auto flex max-w-1/2 flex-col justify-center text-left sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2">
           <h1 className="text-primary text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
-            Message from Our Director
+            Message from Our Chairman
           </h1>
           <p className="mx-auto mt-4 text-gray-700 lg:mx-0">
             <FaQuoteLeft className="mr-2 inline text-green-700" />
@@ -83,14 +83,14 @@ export default function HomeContent() {
             nurture the prosperity of every livestock owner we serve.
           </p>
           <p className="mt-4 font-semibold text-green-800">
-            &#x2D; Mr. Gopal Thapa
+            &#x2D; Mr. Shivji Prasad Kalwar
           </p>
         </div>
 
         {/* Right side - photo */}
         <div className="relative mx-auto min-h-[200px] w-1/2 overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] sm:w-xs md:min-h-[340px] md:w-md lg:w-1/3">
           <Image
-            src={ceoImg}
+            src={chairmanImg}
             alt="CEO"
             fill
             className="object-cover"

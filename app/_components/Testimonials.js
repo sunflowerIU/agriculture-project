@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import profile2 from "@/public/profile2.jpg";
+import profile2 from "@/public/gallery/company/profile2.jpg";
 import { FaQuoteLeft } from "react-icons/fa6";
 
 function Testimonials() {

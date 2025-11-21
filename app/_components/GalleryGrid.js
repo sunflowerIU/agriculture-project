@@ -3,23 +3,26 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import img1 from "@/public/img1.jpg";
-import img2 from "@/public/img2.jpg";
-import img3 from "@/public/img3.jpg";
-import profile1 from "@/public/profile1.jpg";
-import profile2 from "@/public/profile2.jpg";
+import img1 from "@/public/silage-section2.jpg";
+import img2 from "@/public/gallery/products/img2.jpg";
+import img3 from "@/public/gallery/products/img3.jpg";
+import profile1 from "@/public/gallery/company/profile1.jpg";
+import profile2 from "@/public/gallery/company/profile2.jpg";
 
-const productImages = [img1, img2, img3, profile1, profile2];
+const productImages = [img1, img2, img3];
 
-function GalleryGrid() {
+const companyImages = [profile1, profile2];
+
+function GalleryGrid({ filter }) {
   const [selectedImg, setSelectedImg] = useState(null);
+  const displayImages = filter === "products" ? productImages : companyImages;
 
   return (
     <>
       {/* Grid Gallery */}
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {productImages.map((src, index) => (
+          {displayImages.map((src, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}

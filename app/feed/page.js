@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "../_components/Button";
-import fodderImg from "@/public/fodder.jpg";
-import cornSilageImg from "@/public/corn-silage.jpg";
+import feedSection1 from "@/public/feed-section1.jpg";
+import feedSection2 from "@/public/feed-section2.png";
 
 export const metadata = {
   title: process.env.NEXT_PUBLIC_COMPANY_NAME,
@@ -32,7 +32,7 @@ export const metadata = {
 };
 export default function FeederPage() {
   return (
-    <section className="mx-auto max-w-7xl px-2 py-6 text-xs sm:px-4 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
+    <section className="mx-auto max-w-7xl px-2 py-6 text-xs sm:px-6 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
       {/* Hero Section */}
       <div className="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
@@ -40,38 +40,33 @@ export default function FeederPage() {
             Feeder Solutions for Livestock
           </h1>
           <p className="text-text mb-4">
-            Discover our range of nutritious maize and corn silage products,
-            specially formulated to boost the health and productivity of your
-            cattle, buffalo, sheep, and goats. Our silage is harvested and
-            processed with care to ensure maximum freshness and nutritional
-            value.
+            Mash Cattle Feed is a complete, balanced formulation created to meet
+            the nutritional needs of cattle at every growth stage. The mash form
+            ensures fast digestion and smooth mixing with other feed
+            ingredients, making it ideal for both small and large farms.
+          </p>
+          <p className="text-text mb-4">
+            Made using premium maize, soya, Mustard cake, DORB, Maize DDGS, Rice
+            DDGS and other essential mineral mixes according to feed formulation
           </p>
           <ul className="text-text mb-4 list-inside list-disc space-y-2">
-            <li>
-              <span className="text-primary font-semibold">Maize:</span> High in
-              carbohydrates and energy, perfect for fattening and daily feeding.
-            </li>
-            <li>
-              <span className="text-primary font-semibold">Corn Silage:</span>{" "}
-              Fermented, high-moisture fodder that improves digestion and feed
-              efficiency.
-            </li>
-            <li>
-              <span className="text-primary font-semibold">Fodder Mixes:</span>{" "}
-              Balanced blends for optimal animal growth and health.
-            </li>
+            <li>Higher milk production</li>
+            <li>Improved digestibility and gut health</li>
+            <li>Enhanced immunity and energy levels</li>
+            <li>Healthy weight gain and body condition</li>
+            <li>Optimal growth for calves and heifers</li>
           </ul>
           <Button href="/contact" variant="primary">
             Contact for Bulk Orders
           </Button>
         </div>
-        <div className="relative h-[220px] w-full sm:h-[280px] md:h-[340px] lg:h-[400px]">
+        <div className="relative mx-auto h-[300px] w-[80%] sm:h-[280px] md:h-[340px] lg:h-[400px]">
           <Image
             placeholder="blur"
-            src={fodderImg}
-            alt="Nutritious Fodder"
+            src={feedSection1}
+            alt="cattle feed"
             fill
-            className="rounded-2xl object-cover shadow-lg"
+            className="rounded-2xl object-center shadow-lg"
             priority
           />
         </div>
@@ -79,20 +74,20 @@ export default function FeederPage() {
 
       {/* Benefits Section */}
       <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center">
-        <div className="relative h-[160px] w-full sm:h-[220px] md:h-[260px] lg:h-[300px]">
+        <div className="relative mx-auto h-[300px] w-[80%] sm:h-[280px] md:h-[340px] lg:h-[400px]">
           <Image
             placeholder="blur"
-            src={cornSilageImg}
-            alt="Corn Silage"
+            src={feedSection2}
+            alt="cattle feed"
             fill
-            className="rounded-2xl object-cover shadow-lg"
+            className="rounded-2xl object-center shadow-lg"
           />
         </div>
         <div>
           <h2 className="text-primary mb-2 text-base font-bold sm:text-2xl lg:text-4xl">
             Why Choose Our Feeder Products?
           </h2>
-          <ul className="text-text list-inside list-disc space-y-2">
+          <ul className="text-text list-inside space-y-2">
             <li>✅ Improves milk and meat production</li>
             <li>✅ Enhances animal health, growth, and fertility</li>
             <li>✅ Cost-effective, easy to store, and long shelf life</li>
@@ -105,12 +100,12 @@ export default function FeederPage() {
       {/* Info Section */}
       <div className="mt-12 rounded-xl bg-white p-6 shadow-md">
         <h3 className="text-primary mb-2 text-base font-bold sm:text-xl lg:text-2xl">
-          How to Use Silage Effectively
+          How to use effectively
         </h3>
         <p className="text-text mb-2">
-          Introduce silage gradually into your animals&apos; diet. Ensure clean
-          storage and regular monitoring for best results. Our team is always
-          ready to help you with feeding plans and technical advice.
+          Introduce our product gradually into your animals&apos; diet. Ensure
+          clean storage and regular monitoring for best results. Our team is
+          always ready to help you with feeding plans and technical advice.
         </p>
         <p className="text-text">
           Contact us for custom solutions and expert recommendations tailored to

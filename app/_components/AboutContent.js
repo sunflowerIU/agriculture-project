@@ -1,14 +1,78 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ContactFooter from "./ContactFooter";
-import TeamSection from "./TeamSection";
-import Testimonials from "./Testimonials";
 import Button from "./Button";
+import ContactFooter from "./ContactFooter";
+import MemberSection from "./TeamSection";
+import Testimonials from "./Testimonials";
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "Krishna Thapa",
+    gender: "male",
+    position: "Technical Head",
+    img: "/team/technicalHead.jpg",
+  },
+  {
+    id: 2,
+    name: "Sunil Pandey",
+    gender: "male",
+    position: "Production Manager",
+    img: "/team/prodManager.jpg",
+    phone: "9855089486",
+  },
+
+  {
+    id: 3,
+    name: "Gokarna Budhathoki",
+    gender: "male",
+    position: "Plant Assistant",
+    img: "/team/plantAssistant.jpg",
+  },
+];
+
+const boardMembers = [
+  {
+    id: 1,
+    name: " Shivji Prasad Kalwar",
+    gender: "male",
+    position: "Chairman",
+    img: "/team/chairman.jpg",
+  },
+  {
+    id: 2,
+    name: " Janak Sharma Poudyel",
+    gender: "male",
+    position: "Director",
+    img: "/team/janak.jpg",
+  },
+  {
+    id: 3,
+    name: " Navraj Simkhada",
+    gender: "male",
+    position: "Director",
+    img: "/team/navraj.jpg",
+  },
+  {
+    id: 4,
+    name: " Ang Phurba Sherpa",
+    gender: "male",
+    position: "Director",
+    img: "/team/phurba.jpg",
+  },
+  {
+    id: 5,
+    name: " Gopal Thapa",
+    gender: "male",
+    position: "Director",
+    img: "/team/gopal.jpg",
+  },
+];
 
 function AboutContent() {
   return (
-    <div className="text-text text-xs sm:text-sm lg:text-lg">
+    <div className="text-text space-y-20 text-xs sm:text-sm lg:text-lg">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-green-900 via-green-800 to-green-700 py-10 text-center text-white">
         <motion.h1
@@ -26,7 +90,7 @@ function AboutContent() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="mx-auto grid max-w-6xl gap-10 px-4 py-10 sm:px-6 sm:py-12 md:grid-cols-2">
+      <section className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-2">
         <div>
           <h2 className="mb-2 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
             Our Mission
@@ -48,8 +112,10 @@ function AboutContent() {
         </div>
       </section>
 
+      {/* board members */}
+      <MemberSection memberList={boardMembers} heading="Board Members" />
       {/* Team Section */}
-      <TeamSection />
+      <MemberSection memberList={teamMembers} heading="Meet Our Team" />
 
       {/* Testimonials */}
       <Testimonials />

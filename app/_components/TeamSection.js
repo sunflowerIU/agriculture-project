@@ -3,40 +3,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Krishna Thapa",
-    gender: "male",
-    position: "Technical Head",
-    img: "/team/technicalHead.jpg",
-  },
-  {
-    id: 2,
-    name: "Sunil Pandey",
-    gender: "male",
-    position: "Production Manager",
-    img: "/team/prodManager.jpg",
-    phone: "9855089486",
-  },
-
-  {
-    id: 3,
-    name: "Gokarna Budhathoki",
-    gender: "male",
-    position: "Plant Assistant",
-    img: "/team/plantAssistant.jpg",
-  },
-];
-function TeamSection() {
+function MemberSection({ heading, memberList }) {
   return (
-    <section className="bg-gray-50 py-10">
+    <section className="bg-gray-50 py-6">
       <div className="mx-auto max-w-6xl px-4 text-center">
         <h2 className="mb-8 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
-          Meet Our Team
+          {heading}
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-          {teamMembers.map((member) => (
+          {memberList.map((member) => (
             <motion.div
               key={member.id}
               whileHover={{ scale: 1.05 }}
@@ -65,4 +40,4 @@ function TeamSection() {
   );
 }
 
-export default TeamSection;
+export default MemberSection;

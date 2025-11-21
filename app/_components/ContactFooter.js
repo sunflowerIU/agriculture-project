@@ -18,6 +18,11 @@ function ContactFooter() {
       <Button variant="secondary" href="/contact">
         Contact Us
       </Button>
+
+      <div className="space-x-4 text-lime-200">
+        <span>{process.env.NEXT_PUBLIC_COMPANY_NAME}</span>
+        <span>ESTD: 2078 BS</span>
+      </div>
     </section>
   );
 }
