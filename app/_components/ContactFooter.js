@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Button from "./Button";
+import Logo from "./Logo";
 import PhoneNumber from "./PhoneNumber";
 import SocialMedia from "./SocialMedia";
 
@@ -15,6 +17,9 @@ function ContactFooter() {
       {/* social media buttons */}
       <SocialMedia position="center" />
       <PhoneNumber />
+      <div className="relative m-auto h-28 w-28">
+        <Image src="/logo.png" alt="logo" quality={100} fill />
+      </div>
       <Button variant="secondary" href="/contact">
         Contact Us
       </Button>

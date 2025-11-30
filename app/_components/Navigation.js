@@ -89,7 +89,7 @@ function Navigation() {
       ref={navRef}
       className="bg-gray-20 z-20 w-full text-lg text-lime-50 shadow-2xs"
     >
-      <nav className="bg-primary flex flex-row items-center justify-between p-4">
+      <nav className="bg-primary flex flex-row items-center justify-between p-2">
         {/* logo */}
         <Logo setIsOpen={setIsOpen} />
         {/* desktop nav */}

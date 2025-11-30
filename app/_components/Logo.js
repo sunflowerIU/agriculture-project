@@ -1,21 +1,21 @@
 import Link from "next/link";
-import logo from "@/public/logo.png";
 import Image from "next/image";
+import logo from "@/public/logo.png";
 
 function Logo({ setIsOpen }) {
   return (
-    <div className="bg-secondary relative h-10 w-10 cursor-pointer rounded-full">
-      <Link onClick={() => setIsOpen(false)} href="/">
+    <Link href="/" onClick={() => setIsOpen(false)}>
+      <div className="relative h-10 w-10 cursor-pointer rounded-full">
         <Image
-          className="scale-200"
           src={logo}
-          placeholder="blur"
-          width={60}
-          height={60}
+          quality={100}
           alt="logo"
+          fill
+          className="scale-120 object-cover"
+          placeholder="blur"
         />
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 
