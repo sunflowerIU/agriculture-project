@@ -24,6 +24,13 @@ const teamMembers = [
     phone: "9855089486",
   },
   {
+    id: 6,
+    name: "Subhadra Pandey Thapa",
+    gender: "female",
+    position: "Finance Head",
+    img: "/team/subhadra-pandey.jpg",
+  },
+  {
     id: 1,
     name: "Krishna Thapa",
     gender: "male",
