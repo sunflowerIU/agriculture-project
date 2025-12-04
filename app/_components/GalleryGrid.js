@@ -1,22 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import img1 from "@/public/silage-section2.jpg";
-import img2 from "@/public/gallery/products/img2.jpg";
+import img2 from "@/public/gallery/products/silage-section1.jpg";
 import img3 from "@/public/gallery/products/img3.jpg";
-import profile1 from "@/public/gallery/company/profile1.jpg";
-import profile2 from "@/public/gallery/company/profile2.jpg";
+import img4 from "@/public/gallery/products/feed-section2.png";
+import logo from "@/public/logo.png";
+import Spinner from "./Spinner";
 
-const productImages = [img1, img2, img3];
+const productImages = [img1, img2, img3, img4];
 
-const companyImages = [profile1, profile2];
+const companyImages = [logo];
 
 function GalleryGrid({ filter }) {
   const [selectedImg, setSelectedImg] = useState(null);
   const displayImages = filter === "products" ? productImages : companyImages;
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setLoading(true);
+
+    const t = setTimeout(() => {
+      setLoading(false);
+    }, 400);
+
+    return () => clearTimeout(t);
+  }, [filter]);
+
+  if (loading) return <Spinner />;
   return (
     <>
       {/* Grid Gallery */}
