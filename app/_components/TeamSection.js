@@ -25,7 +25,11 @@ function MemberSection({ heading, memberList }) {
                 className="mx-auto rounded-full"
               />
               <h3 className="mt-3 font-semibold text-green-800">
-                {member.gender === "male" ? "Mr. " : "Mrs. "}
+                {member.prefix
+                  ? `${member.prefix}.`
+                  : member.gender === "male"
+                    ? "Mr. "
+                    : "Mrs. "}
                 {member.name}
               </h3>
               <p className="text-xs text-gray-600 sm:text-sm lg:text-base">

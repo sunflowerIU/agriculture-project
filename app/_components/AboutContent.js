@@ -11,7 +11,7 @@ const teamMembers = [
     id: 5,
     name: " Gopal Thapa",
     gender: "male",
-    position: "Director",
+    position: "Managing Director",
     img: "/team/gopal.jpg",
   },
 
@@ -68,12 +68,13 @@ const boardMembers = [
     gender: "male",
     position: "Director",
     img: "/team/navraj.jpg",
+    prefix: "Dr",
   },
   {
     id: 5,
     name: " Gopal Thapa",
     gender: "male",
-    position: "Director",
+    position: "Managing Director",
     img: "/team/gopal.jpg",
   },
   {
