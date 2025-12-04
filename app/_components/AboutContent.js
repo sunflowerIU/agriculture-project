@@ -8,12 +8,13 @@ import Testimonials from "./Testimonials";
 
 const teamMembers = [
   {
-    id: 1,
-    name: "Krishna Thapa",
+    id: 5,
+    name: " Gopal Thapa",
     gender: "male",
-    position: "Technical Head",
-    img: "/team/technicalHead.jpg",
+    position: "Director",
+    img: "/team/gopal.jpg",
   },
+
   {
     id: 2,
     name: "Sunil Pandey",
@@ -21,6 +22,13 @@ const teamMembers = [
     position: "Production Manager",
     img: "/team/prodManager.jpg",
     phone: "9855089486",
+  },
+  {
+    id: 1,
+    name: "Krishna Thapa",
+    gender: "male",
+    position: "Technical Head",
+    img: "/team/technicalHead.jpg",
   },
 
   {
@@ -55,18 +63,18 @@ const boardMembers = [
     img: "/team/navraj.jpg",
   },
   {
-    id: 4,
-    name: " Ang Phurba Sherpa",
-    gender: "male",
-    position: "Director",
-    img: "/team/phurba.jpg",
-  },
-  {
     id: 5,
     name: " Gopal Thapa",
     gender: "male",
     position: "Director",
     img: "/team/gopal.jpg",
+  },
+  {
+    id: 4,
+    name: " Ang Phurba Sherpa",
+    gender: "male",
+    position: "Director",
+    img: "/team/phurba.jpg",
   },
 ];
 
