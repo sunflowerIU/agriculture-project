@@ -74,7 +74,7 @@ const boardMembers = [
     id: 5,
     name: " Gopal Thapa",
     gender: "male",
-    position: "Managing Director",
+    position: "Director",
     img: "/team/gopal.jpg",
   },
   {
