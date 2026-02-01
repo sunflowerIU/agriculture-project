@@ -14,13 +14,6 @@ const teamMembers = [
     position: "Managing Director",
     img: "/team/gopal.jpg",
   },
-  {
-    id: 1,
-    name: " Shivji Prasad Kalwar",
-    gender: "male",
-    position: "Director",
-    img: "/team/chairman.jpg",
-  },
 
   {
     id: 2,
@@ -61,6 +54,14 @@ const boardMembers = [
     gender: "male",
     position: "Chairman",
     img: "/team/gopal.jpg",
+  },
+
+  {
+    id: 1,
+    name: " Shivji Prasad Kalwar",
+    gender: "male",
+    position: "Director",
+    img: "/team/chairman.jpg",
   },
   {
     id: 2,
