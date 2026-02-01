@@ -14,6 +14,13 @@ const teamMembers = [
     position: "Managing Director",
     img: "/team/gopal.jpg",
   },
+  {
+    id: 1,
+    name: " Shivji Prasad Kalwar",
+    gender: "male",
+    position: "Director",
+    img: "/team/chairman.jpg",
+  },
 
   {
     id: 2,
@@ -31,7 +38,7 @@ const teamMembers = [
     img: "/team/subhadra-pandey.jpg",
   },
   {
-    id: 1,
+    id: 7,
     name: "Krishna Thapa",
     gender: "male",
     position: "Technical Head",
@@ -49,11 +56,11 @@ const teamMembers = [
 
 const boardMembers = [
   {
-    id: 1,
-    name: " Shivji Prasad Kalwar",
+    id: 5,
+    name: " Gopal Thapa",
     gender: "male",
     position: "Chairman",
-    img: "/team/chairman.jpg",
+    img: "/team/gopal.jpg",
   },
   {
     id: 2,
@@ -70,13 +77,7 @@ const boardMembers = [
     img: "/team/navraj.jpg",
     prefix: "Dr",
   },
-  {
-    id: 5,
-    name: " Gopal Thapa",
-    gender: "male",
-    position: "Director",
-    img: "/team/gopal.jpg",
-  },
+
   {
     id: 4,
     name: " Ang Phurba Sherpa",

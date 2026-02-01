@@ -6,8 +6,6 @@ import Button from "./_components/Button";
 import ContactFooter from "./_components/ContactFooter";
 import HomeContent from "./_components/HomeContents";
 import PhoneNumber from "./_components/PhoneNumber";
-import { FaMobileScreenButton } from "react-icons/fa6";
-import { MdOutlineMail } from "react-icons/md";
 
 export const metadata = {
   title: process.env.NEXT_PUBLIC_COMPANY_NAME,
