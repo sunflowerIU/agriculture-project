@@ -83,7 +83,7 @@ export default function HomeContent() {
             nurture the prosperity of every livestock owner we serve.
           </p>
           <p className="mt-4 font-semibold text-green-800">
-            &#x2D; Mr. Shivji Prasad Kalwar
+            &#x2D; Mr. Gopal Thapa
           </p>
         </div>
 
