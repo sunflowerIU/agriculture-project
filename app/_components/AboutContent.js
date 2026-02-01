@@ -96,37 +96,62 @@ function AboutContent() {
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
           className="text-base font-bold sm:text-3xl lg:text-5xl"
         >
           About Us
         </motion.h1>
-        <p className="mx-auto mt-4 max-w-3xl text-lime-100">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="mx-auto mt-4 max-w-3xl text-lime-100"
+        >
           We are committed to delivering quality and building trust with our
           customers through innovation, excellence, and sustainability.
-        </p>
+        </motion.p>
       </section>
 
       {/* Mission & Vision */}
       <section className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-2">
         <div>
-          <h2 className="mb-2 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="mb-2 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl"
+          >
             Our Mission
-          </h2>
-          <p className="leading-relaxed text-gray-700">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="leading-relaxed text-gray-700"
+          >
             To provide high-quality products and services that bring value to
             our clients and positively impact communities. We believe in
             sustainable practices and long-term growth for all stakeholders.
-          </p>
+          </motion.p>
         </div>
         <div>
-          <h2 className="mb-2 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="mb-2 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl"
+          >
             Our Vision
-          </h2>
-          <p className="leading-relaxed text-gray-700">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="leading-relaxed text-gray-700"
+          >
             To be recognized as a trusted leader in our industry, setting new
             standards for innovation, integrity, and customer satisfaction.
-          </p>
+          </motion.p>
         </div>
       </section>
 

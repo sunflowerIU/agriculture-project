@@ -6,6 +6,7 @@ import Button from "./_components/Button";
 import ContactFooter from "./_components/ContactFooter";
 import HomeContent from "./_components/HomeContents";
 import PhoneNumber from "./_components/PhoneNumber";
+import HeroFrontText from "./_components/HeroFrontText";
 
 export const metadata = {
   title: process.env.NEXT_PUBLIC_COMPANY_NAME,
@@ -53,20 +54,7 @@ export default function Home() {
 
         {/* Overlay content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-2 text-center">
-          <h1 className="text-primary bg-secondary text-bold rounded-xl px-4 py-1 text-xl leading-tight font-bold drop-shadow-lg sm:text-3xl lg:text-5xl">
-            Welcome to {process.env.NEXT_PUBLIC_COMPANY_NAME}
-          </h1>
-          <p className="mt-2 max-w-2xl drop-shadow-md">
-            Discover premium-quality corn silage and feed solutions for your
-            livestock. Fresh, nutritious, and grown with care to maximize
-            productivity and sustainability.
-          </p>
-
-          <Button href="/contact" variant="primary">
-            Contact Us Now
-          </Button>
-
-          <PhoneNumber />
+          <HeroFrontText />
         </div>
       </header>
 
