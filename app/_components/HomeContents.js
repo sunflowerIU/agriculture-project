@@ -10,7 +10,7 @@ import Button from "../_components/Button";
 import img1 from "@/public/silage-section2.jpg";
 import img2 from "@/public/gallery/products/img2.jpg";
 import img3 from "@/public/gallery/products/img3.jpg";
-import chairmanImg from "@/public/team/chairman.jpg";
+import chairmanImg from "@/public/team/gopal.jpg";
 import { FaBullseye } from "react-icons/fa6";
 
 const images = [img1, img2, img3];
