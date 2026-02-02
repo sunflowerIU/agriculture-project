@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ScrollRevealLeftRight from "./ScrollRevealLeftRight";
 
 function MemberSection({ heading, memberList }) {
   return (
@@ -10,7 +11,7 @@ function MemberSection({ heading, memberList }) {
         <h2 className="mb-8 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
           {heading}
         </h2>
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <ScrollRevealLeftRight className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {memberList.map((member) => (
             <motion.div
               key={member.id}
@@ -38,7 +39,7 @@ function MemberSection({ heading, memberList }) {
               {member.phone && <p>{member.phone}</p>}
             </motion.div>
           ))}
-        </div>
+        </ScrollRevealLeftRight>
       </div>
     </section>
   );

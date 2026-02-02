@@ -164,7 +164,7 @@ function AboutContent() {
       <Testimonials />
 
       {/* Careers Section */}
-      <section className="mx-auto max-w-4xl px-4 py-8 text-center">
+      {/* <section className="mx-auto max-w-4xl px-4 py-8 text-center">
         <h2 className="mb-4 text-xl font-bold text-green-900 sm:text-2xl lg:text-3xl">
           Join Our Team
         </h2>
@@ -177,7 +177,7 @@ function AboutContent() {
         <div className="flex justify-center">
           <Button href="/career">Explore Careers</Button>
         </div>
-      </section>
+      </section> */}
 
       <ContactFooter />
     </div>

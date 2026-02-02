@@ -11,7 +11,8 @@ import img1 from "@/public/silage-section2.jpg";
 import img2 from "@/public/gallery/products/img2.jpg";
 import img3 from "@/public/gallery/products/img3.jpg";
 import chairmanImg from "@/public/team/gopal.jpg";
-import { FaBullseye } from "react-icons/fa6";
+import { FaBullseye, FaQuoteRight } from "react-icons/fa6";
+import ScrollRevealLeftRight from "./ScrollRevealLeftRight";
 
 const images = [img1, img2, img3];
 
@@ -30,7 +31,7 @@ export default function HomeContent() {
       {/* Hero with carousel */}
       <section className="relative mx-auto flex max-w-6xl px-1 py-6 text-xs sm:gap-4 sm:px-4 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
         {/* Left side - text */}
-        <div className="mx-auto flex max-w-1/3 flex-col justify-center px-2 text-center sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2 lg:text-left">
+        <ScrollRevealLeftRight className="mx-auto flex max-w-1/3 flex-col justify-center px-2 text-center sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2 lg:text-left">
           <h1 className="text-primary text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
             Welcome to {process.env.NEXT_PUBLIC_COMPANY_NAME}
           </h1>
@@ -44,7 +45,7 @@ export default function HomeContent() {
               View Gallery
             </Button>
           </div>
-        </div>
+        </ScrollRevealLeftRight>
 
         {/* Right side - carousel */}
         <div className="h-sm relative mx-auto w-3/5 overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] sm:w-xs md:min-h-[340px] md:w-md lg:w-1/3">
@@ -53,7 +54,7 @@ export default function HomeContent() {
               key={index}
               className="absolute inset-0"
               animate={{ opacity: index === current ? 1 : 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.5 }}
             >
               <Image
                 placeholder="blur"
@@ -69,9 +70,12 @@ export default function HomeContent() {
       </section>
 
       {/* CEO Message */}
-      <section className="relative mx-auto flex max-w-6xl flex-row-reverse gap-6 px-4 py-6 text-xs sm:px-6 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
+      <section className="relative mx-auto flex max-w-6xl flex-row-reverse gap-10 px-4 py-6 text-xs sm:px-6 sm:py-8 sm:text-sm lg:py-10 lg:text-lg">
         {/* Left side - text */}
-        <div className="mx-auto flex max-w-1/2 flex-col justify-center text-left sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2">
+        <ScrollRevealLeftRight
+          direction="right"
+          className="mx-auto flex max-w-1/2 flex-col justify-center text-left sm:max-w-[300px] md:max-w-[400px] lg:max-w-1/2"
+        >
           <h1 className="text-primary text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
             Message from Our Chairman
           </h1>
@@ -81,14 +85,18 @@ export default function HomeContent() {
             mission to empower farmers with sustainable, high-quality fodder
             solutions. Our vision is not only to provide feed but also to
             nurture the prosperity of every livestock owner we serve.
+            <FaQuoteRight className="mr-2 inline text-green-700" />
           </p>
           <p className="mt-4 font-semibold text-green-800">
             &#x2D; Mr. Gopal Thapa
           </p>
-        </div>
+        </ScrollRevealLeftRight>
 
         {/* Right side - photo */}
-        <div className="relative mx-auto min-h-[200px] w-1/2 overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] sm:w-xs md:min-h-[340px] md:w-md lg:w-1/3">
+        <ScrollRevealLeftRight
+          direction="left"
+          className="relative mx-auto min-h-[200px] min-w-1/3 overflow-hidden rounded-xl shadow-lg sm:min-h-[280px] sm:w-xs md:min-h-[340px] md:w-md lg:w-1/3"
+        >
           <Image
             src={chairmanImg}
             alt="CEO"
@@ -97,13 +105,13 @@ export default function HomeContent() {
             placeholder="blur"
             priority
           />
-        </div>
+        </ScrollRevealLeftRight>
       </section>
 
       {/* Mission & Vision */}
       <section className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-xs sm:px-6 sm:py-12 sm:text-sm lg:flex-row lg:items-center lg:gap-12 lg:py-16 lg:text-lg">
         {/* Left side - text */}
-        <div className="mx-auto flex w-full max-w-[500px] flex-col justify-center text-center lg:mx-0 lg:w-1/2 lg:text-left">
+        <ScrollRevealLeftRight className="mx-auto flex w-full max-w-[500px] flex-col justify-center text-center lg:mx-0 lg:w-1/2 lg:text-left">
           <h1 className="text-primary mb-4 text-base leading-tight font-bold sm:text-3xl lg:text-5xl">
             Our Mission & Vision
           </h1>
@@ -113,9 +121,9 @@ export default function HomeContent() {
             mission and vision drive us to set new standards in Nepal’s
             agricultural sector.
           </p>
-        </div>
+        </ScrollRevealLeftRight>
         {/* Right side - cards */}
-        <div className="mx-auto flex w-full max-w-2xl flex-col gap-6 sm:flex-row lg:w-1/2">
+        <ScrollRevealLeftRight className="mx-auto flex w-full max-w-2xl flex-col gap-6 sm:flex-row lg:w-1/2">
           <div className="flex-1 rounded-xl bg-white p-6 shadow-md">
             <h3 className="mb-4 flex flex-col items-center text-lg font-semibold text-green-800">
               <FaBullseye className="mb-1 text-2xl" />
@@ -138,7 +146,7 @@ export default function HomeContent() {
               customer satisfaction across the agricultural sector.
             </p>
           </div>
-        </div>
+        </ScrollRevealLeftRight>
       </section>
     </div>
   );

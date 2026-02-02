@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa6";
+import ScrollRevealLeftRight from "./ScrollRevealLeftRight";
 
 const testimonialsList = [
   {
@@ -48,7 +49,7 @@ function Testimonials() {
         <h2 className="mb-8 text-base font-bold text-green-900 sm:text-2xl lg:text-4xl">
           What Our Clients Say
         </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ScrollRevealLeftRight className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonialsList.map((testimonial) => (
             <motion.div
               key={testimonial.id}
@@ -78,7 +79,7 @@ function Testimonials() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </ScrollRevealLeftRight>
       </div>
     </section>
   );
