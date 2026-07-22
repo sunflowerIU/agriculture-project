@@ -70,7 +70,7 @@ const boardMembers = [
     gender: "male",
     status: "Mr.",
     position: "Director",
-    img: "/team/janak.jpeg",
+    img: "/team/Mr.DhirajKoirala.jpeg",
   },
   {
     id: 3,
