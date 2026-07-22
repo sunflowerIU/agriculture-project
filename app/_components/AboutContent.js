@@ -58,33 +58,36 @@ const boardMembers = [
 
   {
     id: 1,
-    name: " Shivji Prasad Kalwar",
+    name: " Dr. Bidhur Pandit",
     gender: "male",
+    status: "Dr.",
     position: "Director",
-    img: "/team/chairman.jpg",
+    img: "/team/DrBidhurPandit.jpeg",
   },
   {
     id: 2,
-    name: " Janak Sharma Poudyel",
+    name: "DhirajKoirala",
     gender: "male",
+    status: "Mr.",
     position: "Director",
-    img: "/team/janak.jpg",
+    img: "/team/janak.jpeg",
   },
   {
     id: 3,
-    name: " Navraj Simkhada",
+    name: " SuryaPrasadSedhai",
     gender: "male",
     position: "Director",
-    img: "/team/navraj.jpg",
-    prefix: "Dr",
+    img: "/team/SuryaPrasadSedhai.jpeg",
+    status: "Dr.",
   },
 
   {
     id: 4,
-    name: " Ang Phurba Sherpa",
+    name: " Keshav Bhasyal",
     gender: "male",
     position: "Director",
-    img: "/team/phurba.jpg",
+    img: "/team/DrKeshavBhasyal.jpeg",
+    status: "PhD. Dr."
   },
 ];
 
