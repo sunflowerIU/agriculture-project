@@ -58,7 +58,7 @@ const boardMembers = [
 
   {
     id: 1,
-    name: " Dr. Bidhur Pandit",
+    name: "Bidhur Pandit",
     gender: "male",
     status: "Dr.",
     position: "Director",
@@ -70,7 +70,7 @@ const boardMembers = [
     gender: "male",
     status: "Mr.",
     position: "Director",
-    img: "/team/Mr.DhirajKoirala.jpeg",
+    img: "/team/MrDhirajKoirala.jpeg",
   },
   {
     id: 3,
