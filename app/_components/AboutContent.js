@@ -58,6 +58,24 @@ const boardMembers = [
 
   {
     id: 1,
+    name: " Keshav Bhasyal",
+    gender: "male",
+    position: "Director",
+    img: "/team/DrKeshavBhasyal.jpeg",
+    status: "PhD. Dr."
+  },
+
+  {
+    id: 2,
+    name: " Surya Prasad Sedhai",
+    gender: "male",
+    position: "Director",
+    img: "/team/SuryaPrasadSedhai.jpeg",
+    status: "Mr.",
+  },
+
+  {
+    id: 3,
     name: "Bidhur Pandit",
     gender: "male",
     status: "Dr.",
@@ -65,30 +83,14 @@ const boardMembers = [
     img: "/team/DrBidhurPandit.jpeg",
   },
   {
-    id: 2,
-    name: "DhirajKoirala",
+    id: 4,
+    name: "Dhiraj Koirala",
     gender: "male",
     status: "Mr.",
     position: "Director",
     img: "/team/MrDhirajKoirala.jpeg",
   },
-  {
-    id: 3,
-    name: " SuryaPrasadSedhai",
-    gender: "male",
-    position: "Director",
-    img: "/team/SuryaPrasadSedhai.jpeg",
-    status: "Dr.",
-  },
-
-  {
-    id: 4,
-    name: " Keshav Bhasyal",
-    gender: "male",
-    position: "Director",
-    img: "/team/DrKeshavBhasyal.jpeg",
-    status: "PhD. Dr."
-  },
+  
 ];
 
 function AboutContent() {
