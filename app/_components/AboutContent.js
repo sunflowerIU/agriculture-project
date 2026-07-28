@@ -63,7 +63,7 @@ const boardMembers = [
 
   {
     id: 1,
-    name: " Keshav Bhasyal",
+    name: " Keshav Bhasyal, PhD",
     gender: "male",
     position: "Director",
     img: "/team/DrKeshavBhasyal.jpeg",
