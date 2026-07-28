@@ -54,6 +54,8 @@ const boardMembers = [
     gender: "male",
     position: "Chairman",
     img: "/team/gopal.jpg",
+    synopsis:
+      "Gopal Thapa is an agribusiness entrepreneur with over 12 years of experience in Nepal's agriculture and livestock sectors. Through sustained engagement with livestock farmers and rural communities, he has focused on raising agricultural productivity, lowering production costs, and advancing the commercialization of farming practices. As Chairman of Progressive Cattle Fodder Pvt. Ltd., he leads the company's strategy for strengthening Nepal's livestock value chain and modernizing fodder production.",
   },
 
   {
@@ -62,7 +64,9 @@ const boardMembers = [
     gender: "male",
     position: "Director",
     img: "/team/DrKeshavBhasyal.jpeg",
-    status: "PhD. Dr."
+    status: "Dr. ",
+    synopsis:
+      "Dr. Keshav Bhasyal is an international relations and labour policy expert with over 15 years of experience in policy development, labour migration, employment, and social protection. He holds a PhD in International Relations from Jawaharlal Nehru University and has worked with the ILO, World Bank, Asian Development Bank, the Government of Nepal, and Tribhuvan University on policy reform and institutional development. He has authored numerous policy papers and continues to advise on evidence-based, inclusive economic development.",
   },
 
   {
@@ -71,26 +75,31 @@ const boardMembers = [
     gender: "male",
     position: "Director",
     img: "/team/SuryaPrasadSedhai.jpeg",
-    status: "Mr.",
+    status: "Mr. ",
+    synopsis:
+      "Surya Prasad Sedhai is a public administration and governance professional with over 30 years of service in the Government of Nepal, including as Joint Secretary at the Ministry of Home Affairs and National Director of the Nepal National Single Window Project. He led the integration of 47 government agencies to modernize trade facilitation in line with WTO and WCO standards, work recognized with a WCO Certificate of Merit. He holds master's degrees in public administration and law, and is a registered advocate of the Supreme Court of Nepal.",
   },
 
   {
     id: 3,
-    name: "Bidhur Pandit",
+    name: " Bidhur Pandit",
     gender: "male",
-    status: "Dr.",
+    status: "Dr. ",
     position: "Director",
     img: "/team/DrBidhurPandit.jpeg",
+    synopsis:
+      "Dr. Bidhur Pandit is a medical professional and investor with over eight years of experience in investment management across renewable energy, tourism, agriculture, and capital markets. His work spans project financing, investment analysis, and corporate governance, supporting the growth of infrastructure, manufacturing, and hospitality ventures. As a board member, he brings a strategic, investment-focused perspective to the company's long-term growth planning.",
   },
   {
     id: 4,
-    name: "Dhiraj Koirala",
+    name: " Dhiraj Koirala",
     gender: "male",
-    status: "Mr.",
+    status: "Mr. ",
     position: "Director",
     img: "/team/MrDhirajKoirala.jpeg",
+    synopsis:
+      "Dhiraj Koirala is an international development professional with over 15 years of experience with the United Nations, the International Organization for Migration, and government institutions across Nepal, the United States, Qatar, and Central Africa. He has led humanitarian and electoral operations, including U.S. resettlement programs and governance initiatives in conflict-affected regions. He holds a master's degree in political science and a certificate in peace and conflict management from the U.S. Institute of Peace.",
   },
-  
 ];
 
 function AboutContent() {
@@ -167,22 +176,6 @@ function AboutContent() {
 
       {/* Testimonials */}
       <Testimonials />
-
-      {/* Careers Section */}
-      {/* <section className="mx-auto max-w-4xl px-4 py-8 text-center">
-        <h2 className="mb-4 text-xl font-bold text-green-900 sm:text-2xl lg:text-3xl">
-          Join Our Team
-        </h2>
-        <p className="mb-6 text-gray-700">
-          We are always looking for passionate and talented individuals to join
-          our growing team. If you are driven by innovation and want to make a
-          difference in the agriculture industry, explore our career
-          opportunities.
-        </p>
-        <div className="flex justify-center">
-          <Button href="/career">Explore Careers</Button>
-        </div>
-      </section> */}
 
       <ContactFooter />
     </div>
