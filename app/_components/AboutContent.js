@@ -7,14 +7,7 @@ import MemberSection from "./TeamSection";
 import Testimonials from "./Testimonials";
 
 const teamMembers = [
-  {
-    id: 5,
-    name: " Gopal Thapa",
-    gender: "male",
-    position: "Managing Director",
-    img: "/team/gopal.jpg",
-  },
-
+ 
   {
     id: 2,
     name: "Sunil Pandey",
@@ -85,13 +78,13 @@ const boardMembers = [
 
   {
     id: 3,
-    name: " Bidhur Pandit",
+    name: " Bidur Prasad Pandit",
     gender: "male",
     status: "Dr. ",
     position: "Director",
     img: "/team/DrBidhurPandit.jpeg",
     synopsis:
-      "Dr. Bidhur Pandit is a medical professional and investor with over eight years of experience in investment management across renewable energy, tourism, agriculture, and capital markets. His work spans project financing, investment analysis, and corporate governance, supporting the growth of infrastructure, manufacturing, and hospitality ventures. As a board member, he brings a strategic, investment-focused perspective to the company's long-term growth planning.",
+      "Dr. Bidur Prasad Pandit is a medical professional and investor with over eight years of experience in investment management across renewable energy, tourism, agriculture, and capital markets. His work spans project financing, investment analysis, and corporate governance, supporting the growth of infrastructure, manufacturing, and hospitality ventures. As a board member, he brings a strategic, investment-focused perspective to the company's long-term growth planning.",
   },
   {
     id: 4,
