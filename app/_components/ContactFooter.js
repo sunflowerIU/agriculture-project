@@ -26,7 +26,7 @@ function ContactFooter() {
 
       <div className="space-x-4 text-lime-200">
         <span>{process.env.NEXT_PUBLIC_COMPANY_NAME}</span>
-        <span>ESTD: 2078 BS</span>
+        <span>ESTD: 2077 BS</span>
       </div>
     </section>
   );
