@@ -50,6 +50,7 @@ const boardMembers = [
     gender: "male",
     position: "Chairman",
     img: "/team/gopal.jpg",
+    status:" Mr. ",
     synopsis:
       "Gopal Thapa is an agribusiness entrepreneur with over 12 years of experience in Nepal's agriculture and livestock sectors. Through sustained engagement with livestock farmers and rural communities, he has focused on raising agricultural productivity, lowering production costs, and advancing the commercialization of farming practices. As Chairman of Progressive Cattle Fodder Industries Ltd., he leads the company's strategy for strengthening Nepal's livestock value chain and modernizing fodder production.",
   },
